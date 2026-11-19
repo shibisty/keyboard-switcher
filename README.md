@@ -1,111 +1,115 @@
 # Keyboard Switcher
 
-Утилита для трея и строки меню. Переключает раскладку клавиатуры, когда фокус получает окно
-выбранного приложения или вкладка выбранного сайта. Когда фокус уходит, возвращает прежнюю раскладку.
+**English** · [Русский](README.ru.md)
 
-Работает на Windows (x64, ARM64), macOS (Apple Silicon, Intel) и Linux.
-Написана на Qt 6 Widgets и C++20, без QML. В простое процессор не используется: программа
-получает события фокуса от системы и ничего не опрашивает по таймеру.
+A tray / menu-bar utility. It switches the keyboard layout when a chosen application's window
+or a chosen website's tab gets focus, and restores the previous layout when focus leaves.
 
-## Правила
+Runs on Windows (x64, ARM64), macOS (Apple Silicon, Intel) and Linux.
+Written in C++20 with Qt 6 Widgets (no QML). It uses no CPU while idle: the program receives
+focus events from the system and never polls on a timer.
 
-| Тип | Пример | Как срабатывает |
+## Rules
+
+| Type | Example | When it fires |
 |---|---|---|
-| Сайт | `github.com → EN` | браузер на переднем плане и в активной вкладке этот домен или его поддомен (нужно расширение браузера) |
-| Приложение | `cmd.exe → EN` | окно этого процесса получило фокус |
-| Пресет | «Редакторы кода и IDE → EN» | окно любой программы из группы |
+| Website | `github.com → EN` | a browser is in the foreground and its active tab is this domain or a subdomain (needs the browser extension) |
+| Application | `cmd.exe → EN` | a window of this process got focus |
+| Preset | "Code editors and IDEs → EN" | a window of any program in the group |
 
-Если подходит несколько правил, побеждает сайт, затем приложение, затем пресет.
-Каждое правило можно поставить на паузу или удалить. Кнопка «Пауза» в меню трея останавливает все правила сразу.
+If several rules match, a website wins over an application, and an application over a preset.
+Each rule can be paused or deleted. The "Pause" item in the tray menu stops all rules at once.
 
-### Пресеты
+### Presets
 
-Списки программ лежат в `res/presets.json`, отдельно для Windows, macOS и Linux:
+The program lists live in `res/presets.json`, separately for Windows, macOS and Linux:
 
-* **Редакторы кода и IDE**: VS Code, Cursor, Windsurf, Zed, Visual Studio, все IDE JetBrains,
-  Android Studio, Qt Creator, Xcode, Eclipse, NetBeans, Sublime Text, **Notepad++**, Vim, Emacs, Kate и др.
-* **Терминалы и консоли**: Windows Terminal, cmd, PowerShell, Git Bash (mintty), ConEmu, PuTTY,
-  Terminal.app, iTerm2, GNOME Terminal, Konsole, Alacritty, kitty, WezTerm, Ghostty и др.
-* **Клиенты БД и API**: HeidiSQL, DbSchema, DBeaver, DataGrip, SSMS, Oracle SQL Developer,
-  pgAdmin, TablePlus, Postman, Insomnia, Bruno и др.
+* **Code editors and IDEs**: VS Code, Cursor, Windsurf, Zed, Visual Studio, all JetBrains IDEs,
+  Android Studio, Qt Creator, Xcode, Eclipse, NetBeans, Sublime Text, **Notepad++**, Vim, Emacs, Kate and more.
+* **Terminals and consoles**: Windows Terminal, cmd, PowerShell, Git Bash (mintty), ConEmu, PuTTY,
+  Terminal.app, iTerm2, GNOME Terminal, Konsole, Alacritty, kitty, WezTerm, Ghostty and more.
+* **Database and API clients**: HeidiSQL, DbSchema, DBeaver, DataGrip, SSMS, Oracle SQL Developer,
+  pgAdmin, TablePlus, Postman, Insomnia, Bruno and more.
 
-Пресет добавляется кнопкой со стопкой рядом с «+». Раскладка по умолчанию английская.
-Список программ пресета виден в подсказке при наведении.
+Presets are added with the stack button next to "+": tick individual applications (a category
+header ticks all of its applications) and press "Add". The default layout is English.
+The identifiers of an application are shown in its tooltip.
 
-## Поддержка Linux
+## Linux support
 
-Бэкенд выбирается автоматически по переменным сеанса. Принудительно его можно задать через
+The backend is chosen automatically from session variables. You can force one with
 `KEYBOARD_SWITCHER_BACKEND=x11|kde|gnome|sway|hyprland`.
 
-| Сеанс | Как работает | Что нужно |
+| Session | How it works | What you need |
 |---|---|---|
-| **Ubuntu** (основная редакция: GNOME в оформлении Ubuntu, Wayland) | как GNOME | расширение GNOME (пакет .deb ставит его сам) |
-| **GNOME 45–51** (Wayland и X11): Ubuntu 24.04–26.10, Fedora, Debian 13 | расширение GNOME Shell `gnome-extension/` | включить расширение (см. ниже) |
-| **GNOME 42–44**: Ubuntu 22.04, Debian 12 | расширение в старом формате `gnome-extension-legacy/`; программа собирается на Qt 5.15 | включить расширение |
-| **KDE Plasma 5/6** (X11 и Wayland): Kubuntu, KDE neon, Fedora KDE | скрипт KWin (загружается автоматически) и D-Bus `org.kde.keyboard` | ничего |
-| **X11**: Xubuntu (XFCE), Ubuntu MATE, Ubuntu Cinnamon, Linux Mint, Lubuntu и Ubuntu Budgie в сеансе X11, i3, Openbox… | EWMH `_NET_ACTIVE_WINDOW` и XKB | ничего |
-| **Sway** | IPC `$SWAYSOCK` | ничего |
-| **Hyprland** | сокеты Hyprland | ничего |
+| **Ubuntu** (main edition: GNOME with Ubuntu theming, Wayland) | same as GNOME | GNOME extension (the .deb package installs it) |
+| **GNOME 45–51** (Wayland and X11): Ubuntu 24.04–26.10, Fedora, Debian 13 | GNOME Shell extension `gnome-extension/` | enable the extension (see below) |
+| **GNOME 42–44**: Ubuntu 22.04, Debian 12 | extension in the old format `gnome-extension-legacy/`; the app is built with Qt 5.15 | enable the extension |
+| **KDE Plasma 5/6** (X11 and Wayland): Kubuntu, KDE neon, Fedora KDE | KWin script (loaded automatically) and D-Bus `org.kde.keyboard` | nothing |
+| **X11**: Xubuntu (XFCE), Ubuntu MATE, Ubuntu Cinnamon, Linux Mint, Lubuntu and Ubuntu Budgie in an X11 session, i3, Openbox… | EWMH `_NET_ACTIVE_WINDOW` and XKB | nothing |
+| **Sway** | IPC `$SWAYSOCK` | nothing |
+| **Hyprland** | Hyprland sockets | nothing |
 
-Другие Wayland-композиторы не дают обычной программе узнать активное окно, поэтому не поддерживаются. Это касается, например, Lubuntu (LXQt) и Ubuntu Budgie, если они запущены в сеансе Wayland: там нужно выбрать сеанс X11 на экране входа.
+Other Wayland compositors do not let an ordinary program learn the active window, so they are not supported.
+This applies, for example, to Lubuntu (LXQt) and Ubuntu Budgie running a Wayland session: choose the X11 session on the login screen.
 
-**Расширение GNOME.** Пакеты .deb и .rpm ставят его сами (нужную версию выбирает `build-linux.sh`). Вручную
-(для GNOME 42–44 вместо `gnome-extension` взять `gnome-extension-legacy`):
+**GNOME extension.** The .deb and .rpm packages install it themselves (`build-linux.sh` picks the right
+version). Manually (for GNOME 42–44 use `gnome-extension-legacy` instead of `gnome-extension`):
 ```bash
 cp -r gnome-extension/keyboard-switcher@keyboardswitcher.github.io ~/.local/share/gnome-shell/extensions/
-# выйти из сеанса и войти снова, затем:
+# log out and back in, then:
 gnome-extensions enable keyboard-switcher@keyboardswitcher.github.io
 ```
-Чтобы иконка появилась в трее GNOME, нужно расширение AppIndicator. В Ubuntu оно есть по умолчанию, в чистом GNOME (Fedora, Debian) его нужно поставить.
+The tray icon in GNOME needs the AppIndicator extension. Ubuntu ships it by default; on plain GNOME (Fedora, Debian) install it.
 
-## Расширение браузера (правила по сайтам)
+## Browser extension (per-website rules)
 
-Папка `browser-extension/`. Поддерживаются Chrome, Edge, Brave, Opera, Vivaldi, Яндекс Браузер и Firefox.
-Расширение отправляет программе **только домен** активной вкладки на `http://127.0.0.1:47863/tab`,
-данные не покидают компьютер. Программа принимает запросы только от расширений: запросы
-с веб-страниц (заголовок `Origin: http(s)://…`) отклоняются.
+Folder `browser-extension/`. Supported: Chrome, Edge, Brave, Opera, Vivaldi, Yandex Browser and Firefox.
+The extension sends the program **only the domain** of the active tab to `http://127.0.0.1:47863/tab`;
+no data leaves the computer. The program accepts requests only from extensions: requests
+from web pages (an `Origin: http(s)://…` header) are rejected.
 
-* Для разработки в Chromium-браузерах: `chrome://extensions` → «Режим разработчика» →
-  «Загрузить распакованное» → папка `browser-extension`.
-* Для разработки в Firefox: `about:debugging` → «Этот Firefox» → «Загрузить временное дополнение» →
-  сначала собрать `dist/extension/keyboard-switcher-firefox.zip` (см. ниже) и выбрать его.
-* Для публикации: `python scripts/pack_extension.py` создаёт архивы для Chrome Web Store,
-  Edge Add-ons и addons.mozilla.org в `dist/extension/`.
+* Development in Chromium browsers: `chrome://extensions` → "Developer mode" →
+  "Load unpacked" → the `browser-extension` folder.
+* Development in Firefox: `about:debugging` → "This Firefox" → "Load Temporary Add-on" →
+  first build `dist/extension/keyboard-switcher-firefox.zip` (see below) and select it.
+* Publishing: `python scripts/pack_extension.py` creates archives for the Chrome Web Store,
+  Edge Add-ons and addons.mozilla.org in `dist/extension/`.
 
-Порт меняется в файле настроек (`browserPort=`) и в параметрах расширения.
+The port is changed in the settings file (`browserPort=`) and in the extension options.
 
-## Сборка
+## Building
 
-### Windows (Qt Creator, MinGW) для разработки
-Откройте `CMakeLists.txt` и выполните *Build → Clear CMake Configuration*, затем соберите проект.
+### Windows (Qt Creator, MinGW) for development
+Open `CMakeLists.txt`, run *Build → Clear CMake Configuration*, then build the project.
 
-### Microsoft Store (prod)
+### Microsoft Store (production)
 
-Нужно: Qt **MSVC 2022** (`msvc2022_64` и `msvc2022_arm64`), Visual Studio 2022 с C++
-и *MSVC ARM64 build tools*, Windows SDK.
+Requires: Qt **MSVC 2022** (`msvc2022_64` and `msvc2022_arm64`), Visual Studio 2022 with C++
+and *MSVC ARM64 build tools*, Windows SDK.
 
-1. Один раз скопируйте `scripts\store.config.example.json` в `scripts\store.config.json`.
-   Заполните его значениями из Partner Center → приложение → *Product management → Product identity*:
+1. Once, copy `scripts\store.config.example.json` to `scripts\store.config.json`.
+   Fill it in with the values from Partner Center → your app → *Product management → Product identity*:
    `Package/Identity/Name`, `Package/Identity/Publisher` (`CN=…`), `PublisherDisplayName`.
-   Там же укажите пути к Qt. Этот файл в git не попадает.
-2. Соберите релиз:
+   Set the Qt paths there too. This file is not committed to git.
+2. Build the release:
 
    ```powershell
    .\scripts\release-store.ps1 -Version 1.0.0.0
    ```
 
-   Скрипт проверяет конфиг и версию. Store требует 4 числа с последним `0`, и каждая загрузка
-   должна быть выше предыдущей. Затем он делает чистые Release-сборки x64 и ARM64, проверяет
-   каждый пакет (identity, версия exe, отсутствие debug-DLL) и собирает
-   `dist\store\<версия>\KeyboardSwitcher_<версия>_arm64_x64.msixupload`:
-   `.msixbundle` вместе с символами `.appxsym` для отчётов о сбоях.
-3. Загрузите `.msixupload` в Partner Center → *Submission → Packages*.
-   Для возможности `runFullTrust` Store попросит короткое обоснование, например
-   «desktop tray utility that changes keyboard layout per app».
+   The script checks the config and the version. The Store requires 4 numbers with the last one `0`,
+   and every upload must be higher than the previous one. It then makes clean Release builds for x64 and ARM64,
+   verifies every package (identity, exe version, no debug DLLs) and produces
+   `dist\store\<version>\KeyboardSwitcher_<version>_arm64_x64.msixupload`:
+   the `.msixbundle` together with `.appxsym` symbols for crash reports.
+3. Upload the `.msixupload` in Partner Center → *Submission → Packages*.
+   For the `runFullTrust` capability the Store asks for a short justification, for example
+   "desktop tray utility that changes keyboard layout per app".
 
-Пакеты не подписываются: Store подписывает их сам.
+Packages are not signed: the Store signs them itself.
 
-#### Отдельные сборки и локальная проверка
+#### Single builds and local testing
 
 ```powershell
 .\scripts\build.ps1 -Arch x64   -QtDir C:\Qt\6.11.1\msvc2022_64 -Version 1.0.0.0
@@ -113,81 +117,88 @@ gnome-extensions enable keyboard-switcher@keyboardswitcher.github.io
 .\scripts\bundle.ps1
 ```
 
-Чтобы установить пакет локально без Store, подпишите его тестовым сертификатом
-(`-CertPfx`, `-CertPassword`) и добавьте этот сертификат в «Доверенные лица».
+To install a package locally without the Store, sign it with a test certificate
+(`-CertPfx`, `-CertPassword`) and add that certificate to "Trusted People".
 
-
-
-### Windows 7 / 8 / 8.1 и 32-битные системы (legacy)
-Qt 6 работает только на Windows 10+ x64/ARM64. Для более старых систем тот же код собирается на Qt 5.15
-в портативный zip (без установки и прав администратора):
+### Windows 7 / 8 / 8.1 and 32-bit systems (legacy)
+Qt 6 runs only on Windows 10+ x64/ARM64. For older systems the same code builds with Qt 5.15
+into a portable zip (no installation or administrator rights needed):
 ```powershell
-.\scripts\build-legacy.ps1 -Arch x86   # 32 бита: Windows 7–11
-.\scripts\build-legacy.ps1 -Arch x64   # 64 бита: Windows 7–8.1
+.\scripts\build-legacy.ps1 -Arch x86   # 32-bit: Windows 7–11
+.\scripts\build-legacy.ps1 -Arch x64   # 64-bit: Windows 7–8.1
 ```
-Нужны Qt 5.15.2 «MinGW 8.1.0 32-bit/64-bit» и MinGW 8.1.0 (Qt Maintenance Tool → Archive).
-Отличия от основной версии: нет автозапуска через Microsoft Store, тёмная тема только на Windows 10.
-Windows XP и Vista не поддерживаются: последняя Qt для них — 5.6 (2016 год), под неё код пришлось бы
-переписать на старый C++ и заменить часть функций WinAPI.
+Requires Qt 5.15.2 "MinGW 8.1.0 32-bit/64-bit" and MinGW 8.1.0 (Qt Maintenance Tool → Archive).
+Differences from the main version: no autostart through the Microsoft Store, dark theme only on Windows 10.
+Windows XP and Vista are not supported: the last Qt for them is 5.6 (2016), and the code would have to be
+rewritten in old C++ with part of the WinAPI calls replaced.
 
 ### macOS
 ```bash
 QT_DIR=~/Qt/6.8.3/macos bash scripts/build-macos.sh 1.1.0.0
-# подпись и нотаризация (иначе Gatekeeper предупредит при первом запуске):
-SIGN_ID="Developer ID Application: Имя (TEAMID)" NOTARY_PROFILE=профиль QT_DIR=… bash scripts/build-macos.sh 1.1.0.0
+# signing and notarization (otherwise Gatekeeper warns on first launch):
+SIGN_ID="Developer ID Application: Name (TEAMID)" NOTARY_PROFILE=profile QT_DIR=… bash scripts/build-macos.sh 1.1.0.0
 ```
-На выходе `dist/macos/KeyboardSwitcher-<версия>.dmg`, универсальная сборка arm64 и x86_64.
-Программа живёт в строке меню без иконки в Dock (`LSUIElement`). Специальных разрешений не нужно.
+The output is `dist/macos/KeyboardSwitcher-<version>.dmg`, a universal arm64 + x86_64 build.
+The program lives in the menu bar without a Dock icon (`LSUIElement`). No special permissions are needed
+for switching layouts.
 
 ### Linux
 ```bash
-sudo apt install build-essential cmake ninja-build qt6-base-dev qt6-tools-dev libx11-dev   # Debian/Ubuntu
-bash scripts/build-linux.sh 1.1.0.0   # dist/linux: .deb, .rpm (если есть rpmbuild), .tar.gz
+sudo apt install build-essential cmake ninja-build qt6-base-dev qt6-tools-dev libx11-dev libxtst-dev libxkbcommon-dev   # Debian/Ubuntu
+bash scripts/build-linux.sh 1.1.0.0   # dist/linux: .deb, .rpm (if rpmbuild exists), .tar.gz
 ```
-Минимальная версия Qt: 6.4 (Ubuntu 24.04); на старых дистрибутивах собирается и с Qt 5.15.
+Minimum Qt version: 6.4 (Ubuntu 24.04); on older distributions it also builds with Qt 5.15.
 
 ### CI
-`ci/github-build.yml` собирает MSIX x64/ARM64, dmg, deb/rpm и архивы расширения.
-Чтобы включить, скопируйте файл в `.github/workflows/`.
+`ci/github-build.yml` builds MSIX x64/ARM64, dmg, deb/rpm and the extension archives.
+To enable it, copy the file to `.github/workflows/`.
 
-## Конвертация выделенного текста
+## Converting selected text
 
-Набрали «руддщ» не в той раскладке? Выделите текст и нажмите горячую клавишу (по умолчанию **Pause**): программа
-скопирует выделение, перепечатает его клавишами другой раскладки («руддщ» → «hello»), вставит обратно, переключит
-раскладку и вернёт прежнее содержимое буфера обмена. Работает по физическим клавишам, поэтому подходят любые
-установленные раскладки (включая Shift и AltGr-символы).
+Typed "руддщ" in the wrong layout? Select the text and press the hotkey (**Pause** by default): the program
+copies the selection, re-types it with the keys of the other layout ("руддщ" → "hello"), pastes it back,
+switches the layout and restores the previous clipboard contents. It works on physical keys, so any installed
+layouts work (including Shift and AltGr characters).
 
-В настройках («Конвертация текста») можно сменить или убрать сочетание, а также включить **автоматическую
-конвертацию после ручного переключения раскладки** (по умолчанию выключена).
+In the settings ("Text conversion") you can change or remove the shortcut and turn on **automatic conversion
+after a manual layout switch** (off by default).
 
-* В терминалах конвертация отключена (Ctrl+C прервал бы запущенную программу); в редакторах кода автоматический режим
-  не срабатывает (без выделения Ctrl+C копирует строку).
-* Windows: хоткей через `RegisterHotKey`, ввод через `SendInput`. Linux: только X11 (нужны libxkbcommon и XTest);
-  Wayland и macOS пока не поддерживаются — в настройках будет «Недоступно в этом сеансе».
+* Conversion is disabled in terminals (Ctrl+C would interrupt the running program); in code editors the automatic
+  mode does not fire (without a selection Ctrl+C copies the whole line).
+* Windows: hotkey through `RegisterHotKey`, input through `SendInput`. Linux: X11 only (needs libxkbcommon and XTest).
+  Wayland and macOS are not supported yet — the settings show "Not available in this session".
 
-## Языки интерфейса
+## Interface languages
 
-57 языков (список в `i18n/languages.json`). Правило: берётся первый язык из системных языков интерфейса, который есть в списке; если ни одного нет — английский. В настройках можно выбрать язык вручную или «Язык системы» (по умолчанию — следует за системой). Арабский, персидский, урду, пушту и синдхи включают зеркальную раскладку (RTL).
+57 languages (list in `i18n/languages.json`). Rule: the first system UI language that is in the list is used;
+if none is, English. In the settings you can pick a language manually or "System language" (the default, which
+follows the system). Arabic, Persian, Urdu, Pashto and Sindhi switch the interface to right-to-left.
 
-Языки без собственного перевода (бходжпури, майтхили, авадхи, магахи, марвари, харьянви, чхаттисгархи → хинди; читтагонгский → бенгальский; сарайки, деккани → урду; чжуанский → китайский упрощённый; фула → французский; мадурский → индонезийский) подхватывают текст близкого языка при автоопределении, отдельным пунктом в списке не показываются.
+Languages without their own translation (Bhojpuri, Maithili, Awadhi, Magahi, Marwari, Haryanvi, Chhattisgarhi → Hindi;
+Chittagonian → Bengali; Saraiki, Deccani → Urdu; Zhuang → Simplified Chinese; Fula → French; Madurese → Indonesian)
+use the text of a related language during auto-detection and are not shown as separate list items.
 
-Переводы выполнены моделью и не вычитаны носителями — редкие языки (йоруба, игбо, оромо, шона, малагасийский, ассамский, одия, пушту, синдхи и др.) особенно стоит проверить.
+The translations were made by a model and have not been proofread by native speakers — rarer languages (Yoruba, Igbo,
+Oromo, Shona, Malagasy, Assamese, Odia, Pashto, Sindhi and others) especially deserve a review.
 
-Как менять тексты: правьте английские строки в коде (`tr()`), добавьте их в `i18n/strings/_source.json` и во все `i18n/strings/<код>.json` (порядок строк важен), затем `python scripts/gen_i18n.py` — он генерирует `.ts`, таблицу языков `src/core/languages_gen.h`, `_locales` расширения, строки `Comment[..]` в `.desktop` и список языков в манифесте MSIX.
+To change texts: edit the English strings in code (`tr()`), add them to `i18n/strings/_source.json` and to all
+`i18n/strings/<code>.json` (the order of strings matters), then run `python scripts/gen_i18n.py`. It generates the `.ts`
+files, the language table `src/core/languages_gen.h`, the extension `_locales`, the `Comment[..]` lines in `.desktop`
+and the language list in the MSIX manifest.
 
-## Где хранятся настройки
+## Where settings are stored
 
-| ОС | Файл |
+| OS | File |
 |---|---|
-| Windows | `%APPDATA%\KeyboardSwitcher\KeyboardSwitcher.ini` (из Store: `%LOCALAPPDATA%\Packages\<пакет>\LocalCache\Roaming\…`) |
+| Windows | `%APPDATA%\KeyboardSwitcher\KeyboardSwitcher.ini` (Store version: `%LOCALAPPDATA%\Packages\<package>\LocalCache\Roaming\…`) |
 | macOS, Linux | `~/.config/KeyboardSwitcher/KeyboardSwitcher.ini` |
 
-Правила версии 1.0 (`process=`) читаются автоматически.
+Rules from version 1.0 (`process=`) are read automatically.
 
-## Ограничения
+## Limitations
 
-* Windows: окна, запущенные от администратора, не принимают сообщения от обычной программы (UIPI),
-  поэтому раскладка в них не переключится.
-* В Windows 11 `cmd` обычно открывается внутри Windows Terminal (`windowsterminal.exe`).
-  Он уже есть в пресете терминалов.
-* Safari не поддерживается: для его расширений нужна отдельная сборка через Xcode.
+* Windows: windows running as administrator do not accept messages from an ordinary program (UIPI),
+  so the layout will not switch in them.
+* On Windows 11 `cmd` usually opens inside Windows Terminal (`windowsterminal.exe`).
+  It is already in the terminals preset.
+* Safari is not supported: its extensions need a separate build through Xcode.
