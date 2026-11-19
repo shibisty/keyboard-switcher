@@ -1,0 +1,6 @@
+build/
+dist/
+*.user
+.qtcreator/
+# Local Store identity and Qt paths (copy from store.config.example.json)
+scripts/store.config.json

@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Αλλάζει τη διάταξη πληκτρολογίου ανά ιστότοπο. Στέλνει μόνο τον τομέα της ενεργής καρτέλας στην εφαρμογή Keyboard Changer σε αυτόν τον υπολογιστή."
+  },
+  "optionsIntro": {
+    "message": "Θύρα της εφαρμογής Keyboard Changer (ίδια με την εφαρμογή, προεπιλογή 47863)."
+  },
+  "optionsPort": {
+    "message": "Θύρα:"
+  },
+  "optionsSave": {
+    "message": "Αποθήκευση"
+  },
+  "optionsTest": {
+    "message": "Δοκιμή σύνδεσης"
+  },
+  "optionsSaved": {
+    "message": "Αποθηκεύτηκε."
+  },
+  "optionsConnected": {
+    "message": "Συνδέθηκε στο Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Σε αυτή τη θύρα απαντά κάτι άλλο."
+  },
+  "optionsNotRunning": {
+    "message": "Το Keyboard Changer δεν εκτελείται ή χρησιμοποιεί άλλη θύρα."
+  }
+}

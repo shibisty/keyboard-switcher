@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "વેબસાઇટ મુજબ કીબોર્ડ લેઆઉટ બદલે છે. આ કમ્પ્યુટર પરની Keyboard Changer ઍપને ફક્ત સક્રિય ટૅબનું ડોમેન મોકલે છે."
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer ઍપનો પોર્ટ (ઍપ જેવો જ, ડિફૉલ્ટ 47863)."
+  },
+  "optionsPort": {
+    "message": "પોર્ટ:"
+  },
+  "optionsSave": {
+    "message": "સાચવો"
+  },
+  "optionsTest": {
+    "message": "કનેક્શન ચકાસો"
+  },
+  "optionsSaved": {
+    "message": "સાચવ્યું."
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer સાથે કનેક્ટ થયું."
+  },
+  "optionsNotApp": {
+    "message": "આ પોર્ટ પર બીજું કંઈક પ્રતિસાદ આપી રહ્યું છે."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer ચાલુ નથી અથવા બીજો પોર્ટ વાપરે છે."
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root { color-scheme: light dark; font: 14px system-ui, sans-serif; }
+    body { margin: 16px; min-width: 320px; }
+    label { display: block; margin-bottom: 8px; }
+    input { width: 90px; }
+    button { margin-right: 8px; }
+    #status { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <p data-i18n="optionsIntro"></p>
+  <label><span data-i18n="optionsPort"></span> <input id="port" type="number" min="1024" max="65535"></label>
+  <button id="save" data-i18n="optionsSave"></button>
+  <button id="test" data-i18n="optionsTest"></button>
+  <div id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>

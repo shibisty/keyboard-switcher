@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "يبدّل تخطيط لوحة المفاتيح حسب الموقع. يرسل نطاق علامة التبويب النشطة فقط إلى تطبيق Keyboard Changer على هذا الحاسوب."
+  },
+  "optionsIntro": {
+    "message": "منفذ تطبيق Keyboard Changer (نفسه في التطبيق، الافتراضي 47863)."
+  },
+  "optionsPort": {
+    "message": "المنفذ:"
+  },
+  "optionsSave": {
+    "message": "حفظ"
+  },
+  "optionsTest": {
+    "message": "اختبار الاتصال"
+  },
+  "optionsSaved": {
+    "message": "تم الحفظ."
+  },
+  "optionsConnected": {
+    "message": "تم الاتصال بـ Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "هناك شيء آخر يستجيب على هذا المنفذ."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer لا يعمل أو يستخدم منفذًا آخر."
+  }
+}

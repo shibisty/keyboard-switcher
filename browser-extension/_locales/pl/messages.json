@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Przełącza układ klawiatury według strony internetowej. Wysyła tylko domenę aktywnej karty do aplikacji Keyboard Changer na tym komputerze."
+  },
+  "optionsIntro": {
+    "message": "Port aplikacji Keyboard Changer (taki sam jak w aplikacji, domyślnie 47863)."
+  },
+  "optionsPort": {
+    "message": "Port:"
+  },
+  "optionsSave": {
+    "message": "Zapisz"
+  },
+  "optionsTest": {
+    "message": "Testuj połączenie"
+  },
+  "optionsSaved": {
+    "message": "Zapisano."
+  },
+  "optionsConnected": {
+    "message": "Połączono z Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Na tym porcie odpowiada coś innego."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer nie jest uruchomiony lub używa innego portu."
+  }
+}

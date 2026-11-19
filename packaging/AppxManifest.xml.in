@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Template: scripts/build.ps1 replaces the @...@ placeholders.
+  For the Microsoft Store take Identity Name, Publisher and PublisherDisplayName
+  from Partner Center -> your app -> Product identity.
+-->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap desktop rescap">
+
+  <Identity
+    Name="@IDENTITY_NAME@"
+    Publisher="@PUBLISHER@"
+    Version="@VERSION@"
+    ProcessorArchitecture="@ARCH@" />
+
+  <Properties>
+    <DisplayName>Keyboard Changer</DisplayName>
+    <PublisherDisplayName>@PUBLISHER_DISPLAY_NAME@</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26100.0" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00.UWPDesktop" MinVersion="14.0.30035.0"
+      Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="zh-Hans" />
+    <Resource Language="zh-Hant" />
+    <Resource Language="ar" />
+    <Resource Language="hi" />
+    <Resource Language="en" />
+    <Resource Language="es" />
+    <Resource Language="bn" />
+    <Resource Language="pt" />
+    <Resource Language="ru" />
+    <Resource Language="ja" />
+    <Resource Language="de" />
+    <Resource Language="ko" />
+    <Resource Language="fr" />
+    <Resource Language="jv" />
+    <Resource Language="te" />
+    <Resource Language="mr" />
+    <Resource Language="vi" />
+    <Resource Language="ta" />
+    <Resource Language="it" />
+    <Resource Language="tr" />
+    <Resource Language="ur" />
+    <Resource Language="pa" />
+    <Resource Language="uk" />
+    <Resource Language="gu" />
+    <Resource Language="th" />
+    <Resource Language="pl" />
+    <Resource Language="ml" />
+    <Resource Language="kn" />
+    <Resource Language="or" />
+    <Resource Language="my" />
+    <Resource Language="az" />
+    <Resource Language="fa" />
+    <Resource Language="su" />
+    <Resource Language="ps" />
+    <Resource Language="ro" />
+    <Resource Language="ha" />
+    <Resource Language="ms" />
+    <Resource Language="sr-Latn" />
+    <Resource Language="uz" />
+    <Resource Language="yo" />
+    <Resource Language="nl" />
+    <Resource Language="sd" />
+    <Resource Language="ig" />
+    <Resource Language="am" />
+    <Resource Language="om" />
+    <Resource Language="id" />
+    <Resource Language="fil" />
+    <Resource Language="ne" />
+    <Resource Language="as" />
+    <Resource Language="ceb" />
+    <Resource Language="hu" />
+    <Resource Language="sn" />
+    <Resource Language="si" />
+    <Resource Language="el" />
+    <Resource Language="cs" />
+    <Resource Language="mg" />
+    <Resource Language="be" />
+  </Resources>
+
+  <Applications>
+    <Application Id="KeyboardChanger" Executable="KeyboardChanger.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="Keyboard Changer"
+        Description="Switches the keyboard layout automatically for selected applications."
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+      </uap:VisualElements>
+
+      <Extensions>
+        <!-- TaskId must match kTaskId in src/autostart_winrt.cpp -->
+        <desktop:Extension Category="windows.startupTask" Executable="KeyboardChanger.exe" EntryPoint="Windows.FullTrustApplication">
+          <desktop:StartupTask TaskId="KeyboardChangerStartup" Enabled="false" DisplayName="Keyboard Changer" />
+        </desktop:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Cambia il layout della tastiera in base al sito web. Invia solo il dominio della scheda attiva all’app Keyboard Changer su questo computer."
+  },
+  "optionsIntro": {
+    "message": "Porta dell’app Keyboard Changer (la stessa dell’app, predefinita 47863)."
+  },
+  "optionsPort": {
+    "message": "Porta:"
+  },
+  "optionsSave": {
+    "message": "Salva"
+  },
+  "optionsTest": {
+    "message": "Verifica connessione"
+  },
+  "optionsSaved": {
+    "message": "Salvato."
+  },
+  "optionsConnected": {
+    "message": "Connesso a Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Su questa porta risponde qualcos’altro."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer non è in esecuzione o usa un’altra porta."
+  }
+}

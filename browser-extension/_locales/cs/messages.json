@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Přepíná rozložení klávesnice podle webu. Aplikaci Keyboard Changer v tomto počítači posílá pouze doménu aktivní karty."
+  },
+  "optionsIntro": {
+    "message": "Port aplikace Keyboard Changer (stejný jako v aplikaci, výchozí 47863)."
+  },
+  "optionsPort": {
+    "message": "Port:"
+  },
+  "optionsSave": {
+    "message": "Uložit"
+  },
+  "optionsTest": {
+    "message": "Otestovat spojení"
+  },
+  "optionsSaved": {
+    "message": "Uloženo."
+  },
+  "optionsConnected": {
+    "message": "Připojeno ke Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Na tomto portu odpovídá něco jiného."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer neběží nebo používá jiný port."
+  }
+}

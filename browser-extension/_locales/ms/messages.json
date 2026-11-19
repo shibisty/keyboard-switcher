@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Menukar susun atur papan kekunci mengikut laman web. Hanya menghantar domain tab aktif kepada aplikasi Keyboard Changer pada komputer ini."
+  },
+  "optionsIntro": {
+    "message": "Port aplikasi Keyboard Changer (sama seperti dalam aplikasi, lalai 47863)."
+  },
+  "optionsPort": {
+    "message": "Port:"
+  },
+  "optionsSave": {
+    "message": "Simpan"
+  },
+  "optionsTest": {
+    "message": "Uji sambungan"
+  },
+  "optionsSaved": {
+    "message": "Disimpan."
+  },
+  "optionsConnected": {
+    "message": "Disambungkan ke Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Sesuatu yang lain menjawab pada port ini."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer tidak berjalan atau menggunakan port lain."
+  }
+}

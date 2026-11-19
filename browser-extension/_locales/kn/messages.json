@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "ವೆಬ್‌ಸೈಟ್ ಪ್ರಕಾರ ಕೀಬೋರ್ಡ್ ಲೇಔಟ್ ಬದಲಿಸುತ್ತದೆ. ಈ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿರುವ Keyboard Changer ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಸಕ್ರಿಯ ಟ್ಯಾಬ್‌ನ ಡೊಮೇನ್ ಮಾತ್ರ ಕಳುಹಿಸುತ್ತದೆ."
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer ಅಪ್ಲಿಕೇಶನ್‌ನ ಪೋರ್ಟ್ (ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿರುವಂತೆಯೇ, ಡೀಫಾಲ್ಟ್ 47863)."
+  },
+  "optionsPort": {
+    "message": "ಪೋರ್ಟ್:"
+  },
+  "optionsSave": {
+    "message": "ಉಳಿಸಿ"
+  },
+  "optionsTest": {
+    "message": "ಸಂಪರ್ಕ ಪರೀಕ್ಷಿಸಿ"
+  },
+  "optionsSaved": {
+    "message": "ಉಳಿಸಲಾಗಿದೆ."
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer ಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ."
+  },
+  "optionsNotApp": {
+    "message": "ಈ ಪೋರ್ಟ್‌ನಲ್ಲಿ ಬೇರೇನೋ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿದೆ."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer ಚಾಲನೆಯಲ್ಲಿಲ್ಲ ಅಥವಾ ಬೇರೆ ಪೋರ್ಟ್ ಬಳಸುತ್ತಿದೆ."
+  }
+}

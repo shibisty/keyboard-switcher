@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "چیدمان صفحه‌کلید را بر اساس وب‌سایت تغییر می‌دهد. فقط دامنهٔ زبانهٔ فعال را به برنامهٔ Keyboard Changer روی این رایانه می‌فرستد."
+  },
+  "optionsIntro": {
+    "message": "درگاه برنامهٔ Keyboard Changer (مانند برنامه، پیش‌فرض 47863)."
+  },
+  "optionsPort": {
+    "message": "درگاه:"
+  },
+  "optionsSave": {
+    "message": "ذخیره"
+  },
+  "optionsTest": {
+    "message": "آزمایش اتصال"
+  },
+  "optionsSaved": {
+    "message": "ذخیره شد."
+  },
+  "optionsConnected": {
+    "message": "به Keyboard Changer متصل شد."
+  },
+  "optionsNotApp": {
+    "message": "چیز دیگری در این درگاه پاسخ می‌دهد."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer اجرا نشده یا از درگاه دیگری استفاده می‌کند."
+  }
+}

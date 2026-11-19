@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Change la disposition du clavier selon le site web. N’envoie que le domaine de l’onglet actif à l’application Keyboard Changer sur cet ordinateur."
+  },
+  "optionsIntro": {
+    "message": "Port de l’application Keyboard Changer (identique à celui de l’application, 47863 par défaut)."
+  },
+  "optionsPort": {
+    "message": "Port :"
+  },
+  "optionsSave": {
+    "message": "Enregistrer"
+  },
+  "optionsTest": {
+    "message": "Tester la connexion"
+  },
+  "optionsSaved": {
+    "message": "Enregistré."
+  },
+  "optionsConnected": {
+    "message": "Connecté à Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Autre chose répond sur ce port."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer n’est pas lancé ou utilise un autre port."
+  }
+}

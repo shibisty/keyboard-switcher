@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "वेबसाइट के अनुसार कीबोर्ड लेआउट बदलता है। इस कंप्यूटर पर Keyboard Changer ऐप को केवल सक्रिय टैब का डोमेन भेजता है।"
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer ऐप का पोर्ट (ऐप के जैसा ही, डिफ़ॉल्ट 47863)।"
+  },
+  "optionsPort": {
+    "message": "पोर्ट:"
+  },
+  "optionsSave": {
+    "message": "सहेजें"
+  },
+  "optionsTest": {
+    "message": "कनेक्शन जाँचें"
+  },
+  "optionsSaved": {
+    "message": "सहेजा गया।"
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer से कनेक्ट हो गया।"
+  },
+  "optionsNotApp": {
+    "message": "इस पोर्ट पर कुछ और जवाब दे रहा है।"
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer नहीं चल रहा है या दूसरा पोर्ट इस्तेमाल कर रहा है।"
+  }
+}

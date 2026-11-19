@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Chuyển bố cục bàn phím theo trang web. Chỉ gửi tên miền của thẻ đang hoạt động tới ứng dụng Keyboard Changer trên máy tính này."
+  },
+  "optionsIntro": {
+    "message": "Cổng của ứng dụng Keyboard Changer (giống trong ứng dụng, mặc định 47863)."
+  },
+  "optionsPort": {
+    "message": "Cổng:"
+  },
+  "optionsSave": {
+    "message": "Lưu"
+  },
+  "optionsTest": {
+    "message": "Kiểm tra kết nối"
+  },
+  "optionsSaved": {
+    "message": "Đã lưu."
+  },
+  "optionsConnected": {
+    "message": "Đã kết nối với Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Có thứ khác đang phản hồi trên cổng này."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer chưa chạy hoặc đang dùng cổng khác."
+  }
+}

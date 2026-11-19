@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "இணையதளத்தின்படி விசைப்பலகைத் தளவமைப்பை மாற்றுகிறது. இந்தக் கணினியில் உள்ள Keyboard Changer பயன்பாட்டுக்கு செயலில் உள்ள தாவலின் டொமைனை மட்டும் அனுப்பும்."
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer பயன்பாட்டின் போர்ட் (பயன்பாட்டில் உள்ளதே, இயல்புநிலை 47863)."
+  },
+  "optionsPort": {
+    "message": "போர்ட்:"
+  },
+  "optionsSave": {
+    "message": "சேமி"
+  },
+  "optionsTest": {
+    "message": "இணைப்பைச் சோதி"
+  },
+  "optionsSaved": {
+    "message": "சேமிக்கப்பட்டது."
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer உடன் இணைக்கப்பட்டது."
+  },
+  "optionsNotApp": {
+    "message": "இந்த போர்ட்டில் வேறொன்று பதிலளிக்கிறது."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer இயங்கவில்லை அல்லது வேறு போர்ட்டைப் பயன்படுத்துகிறது."
+  }
+}

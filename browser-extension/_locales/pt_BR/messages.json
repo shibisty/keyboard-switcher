@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Alterna o layout do teclado por site. Envia apenas o domínio da aba ativa para o aplicativo Keyboard Changer neste computador."
+  },
+  "optionsIntro": {
+    "message": "Porta do aplicativo Keyboard Changer (a mesma do aplicativo, padrão 47863)."
+  },
+  "optionsPort": {
+    "message": "Porta:"
+  },
+  "optionsSave": {
+    "message": "Salvar"
+  },
+  "optionsTest": {
+    "message": "Testar conexão"
+  },
+  "optionsSaved": {
+    "message": "Salvo."
+  },
+  "optionsConnected": {
+    "message": "Conectado ao Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Outra coisa responde nesta porta."
+  },
+  "optionsNotRunning": {
+    "message": "O Keyboard Changer não está em execução ou usa outra porta."
+  }
+}

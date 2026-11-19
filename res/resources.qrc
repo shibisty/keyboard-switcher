@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>presets.json</file>
+        <file>app.png</file>
+    </qresource>
+</RCC>

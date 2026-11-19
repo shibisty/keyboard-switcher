@@ -1,0 +1,95 @@
+# Copy to .github/workflows/build.yml to enable.
+name: Build (Windows x64/ARM64 MSIX, macOS dmg, Linux deb/rpm)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  QT_VERSION: '6.8.3'
+  APP_VERSION: '1.1.0.0'
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        include:
+          - arch: x64
+            qt_arch: win64_msvc2022_64
+          - arch: arm64
+            qt_arch: win64_msvc2022_arm64_cross_compiled
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          arch: ${{ matrix.qt_arch }}
+          autodesktop: true      # x64 host tools for the ARM64 cross build
+          cache: true
+      - name: Build and package
+        shell: pwsh
+        run: |
+          $hostQt = Join-Path (Split-Path -Parent $env:QT_ROOT_DIR) 'msvc2022_64'
+          $p = @{ Arch = '${{ matrix.arch }}'; QtDir = $env:QT_ROOT_DIR; Version = $env:APP_VERSION }
+          if ('${{ matrix.arch }}' -eq 'arm64') { $p.QtHostDir = $hostQt }
+          ./scripts/build.ps1 @p
+      - uses: actions/upload-artifact@v4
+        with:
+          name: msix-${{ matrix.arch }}
+          path: dist/*.msix
+
+  windows-legacy:   # Windows 7+ x86, Qt 5.15 + MinGW, portable zip
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          arch: win32_mingw81
+          tools: 'tools_mingw,qt.tools.win32_mingw810'
+          cache: true
+      - name: Build
+        shell: pwsh
+        run: ./scripts/build-legacy.ps1 -Arch x86 -QtDir $env:QT_ROOT_DIR -MinGWDir "$env:IQTA_TOOLS\mingw810_32" -Version $env:APP_VERSION
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-legacy-x86
+          path: dist/legacy/*.zip
+
+  macos:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - run: brew install ninja
+      - run: QT_DIR="$QT_ROOT_DIR" bash scripts/build-macos.sh "$APP_VERSION"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-dmg
+          path: dist/macos/*.dmg
+
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build qt6-base-dev qt6-tools-dev qt6-l10n-tools libx11-dev libgl-dev rpm
+      - run: bash scripts/build-linux.sh "$APP_VERSION"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-packages
+          path: dist/linux/*
+
+  extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/pack_extension.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browser-extension
+          path: dist/extension/*.zip

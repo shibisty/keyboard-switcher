@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "የቁልፍ ሰሌዳ አቀማመጥን በድር ጣቢያ ይቀይራል። በዚህ ኮምፒውተር ላይ ለሚገኘው የKeyboard Changer መተግበሪያ የንቁ ትር ጎራን ብቻ ይልካል።"
+  },
+  "optionsIntro": {
+    "message": "የKeyboard Changer መተግበሪያ ወደብ (በመተግበሪያው ውስጥ እንዳለው፣ ነባሪ 47863)።"
+  },
+  "optionsPort": {
+    "message": "ወደብ፦"
+  },
+  "optionsSave": {
+    "message": "አስቀምጥ"
+  },
+  "optionsTest": {
+    "message": "ግንኙነትን ሞክር"
+  },
+  "optionsSaved": {
+    "message": "ተቀምጧል።"
+  },
+  "optionsConnected": {
+    "message": "ከKeyboard Changer ጋር ተገናኝቷል።"
+  },
+  "optionsNotApp": {
+    "message": "በዚህ ወደብ ላይ ሌላ ነገር እየመለሰ ነው።"
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer እየሰራ አይደለም ወይም ሌላ ወደብ ይጠቀማል።"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "ウェブサイトに応じてキーボードレイアウトを切り替えます。アクティブなタブのドメインだけをこのコンピューター上の Keyboard Changer アプリに送信します。"
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer アプリのポート（アプリと同じ、既定は 47863）。"
+  },
+  "optionsPort": {
+    "message": "ポート:"
+  },
+  "optionsSave": {
+    "message": "保存"
+  },
+  "optionsTest": {
+    "message": "接続をテスト"
+  },
+  "optionsSaved": {
+    "message": "保存しました。"
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer に接続しました。"
+  },
+  "optionsNotApp": {
+    "message": "このポートでは別のものが応答しています。"
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer が実行されていないか、別のポートを使用しています。"
+  }
+}

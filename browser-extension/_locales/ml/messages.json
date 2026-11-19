@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "വെബ്സൈറ്റ് അനുസരിച്ച് കീബോർഡ് ലേഔട്ട് മാറ്റുന്നു. ഈ കമ്പ്യൂട്ടറിലെ Keyboard Changer ആപ്പിലേക്ക് സജീവ ടാബിന്റെ ഡൊമെയ്ൻ മാത്രം അയയ്ക്കുന്നു."
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer ആപ്പിന്റെ പോർട്ട് (ആപ്പിലേതുതന്നെ, സ്ഥിരം 47863)."
+  },
+  "optionsPort": {
+    "message": "പോർട്ട്:"
+  },
+  "optionsSave": {
+    "message": "സംരക്ഷിക്കുക"
+  },
+  "optionsTest": {
+    "message": "കണക്ഷൻ പരിശോധിക്കുക"
+  },
+  "optionsSaved": {
+    "message": "സംരക്ഷിച്ചു."
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer-മായി ബന്ധിപ്പിച്ചു."
+  },
+  "optionsNotApp": {
+    "message": "ഈ പോർട്ടിൽ മറ്റെന്തോ പ്രതികരിക്കുന്നു."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer പ്രവർത്തിക്കുന്നില്ല അല്ലെങ്കിൽ മറ്റൊരു പോർട്ട് ഉപയോഗിക്കുന്നു."
+  }
+}

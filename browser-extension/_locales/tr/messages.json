@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Klavye düzenini web sitesine göre değiştirir. Yalnızca etkin sekmenin alan adını bu bilgisayardaki Keyboard Changer uygulamasına gönderir."
+  },
+  "optionsIntro": {
+    "message": "Keyboard Changer uygulamasının bağlantı noktası (uygulamadakiyle aynı, varsayılan 47863)."
+  },
+  "optionsPort": {
+    "message": "Bağlantı noktası:"
+  },
+  "optionsSave": {
+    "message": "Kaydet"
+  },
+  "optionsTest": {
+    "message": "Bağlantıyı sına"
+  },
+  "optionsSaved": {
+    "message": "Kaydedildi."
+  },
+  "optionsConnected": {
+    "message": "Keyboard Changer’a bağlandı."
+  },
+  "optionsNotApp": {
+    "message": "Bu bağlantı noktasında başka bir şey yanıt veriyor."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer çalışmıyor veya başka bir bağlantı noktası kullanıyor."
+  }
+}

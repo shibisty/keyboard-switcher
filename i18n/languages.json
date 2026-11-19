@@ -1,0 +1,562 @@
+[
+ {
+  "code": "zh_CN",
+  "tag": "zh-Hans",
+  "autonym": "简体中文",
+  "english": "Chinese (Simplified)",
+  "rtl": false,
+  "chrome": "zh_CN"
+ },
+ {
+  "code": "zh_TW",
+  "tag": "zh-Hant",
+  "autonym": "繁體中文",
+  "english": "Chinese (Traditional)",
+  "rtl": false,
+  "chrome": "zh_TW"
+ },
+ {
+  "code": "ar",
+  "tag": "ar",
+  "autonym": "العربية",
+  "english": "Arabic",
+  "rtl": true,
+  "chrome": "ar"
+ },
+ {
+  "code": "hi",
+  "tag": "hi",
+  "autonym": "हिन्दी",
+  "english": "Hindi",
+  "rtl": false,
+  "chrome": "hi"
+ },
+ {
+  "code": "en",
+  "tag": "en",
+  "autonym": "English",
+  "english": "English",
+  "rtl": false,
+  "chrome": "en"
+ },
+ {
+  "code": "es",
+  "tag": "es",
+  "autonym": "Español",
+  "english": "Spanish",
+  "rtl": false,
+  "chrome": "es"
+ },
+ {
+  "code": "bn",
+  "tag": "bn",
+  "autonym": "বাংলা",
+  "english": "Bengali",
+  "rtl": false,
+  "chrome": "bn"
+ },
+ {
+  "code": "pt",
+  "tag": "pt",
+  "autonym": "Português",
+  "english": "Portuguese",
+  "rtl": false,
+  "chrome": "pt_BR"
+ },
+ {
+  "code": "ru",
+  "tag": "ru",
+  "autonym": "Русский",
+  "english": "Russian",
+  "rtl": false,
+  "chrome": "ru"
+ },
+ {
+  "code": "ja",
+  "tag": "ja",
+  "autonym": "日本語",
+  "english": "Japanese",
+  "rtl": false,
+  "chrome": "ja"
+ },
+ {
+  "code": "de",
+  "tag": "de",
+  "autonym": "Deutsch",
+  "english": "German",
+  "rtl": false,
+  "chrome": "de"
+ },
+ {
+  "code": "ko",
+  "tag": "ko",
+  "autonym": "한국어",
+  "english": "Korean",
+  "rtl": false,
+  "chrome": "ko"
+ },
+ {
+  "code": "fr",
+  "tag": "fr",
+  "autonym": "Français",
+  "english": "French",
+  "rtl": false,
+  "chrome": "fr"
+ },
+ {
+  "code": "jv",
+  "tag": "jv",
+  "autonym": "Basa Jawa",
+  "english": "Javanese",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "te",
+  "tag": "te",
+  "autonym": "తెలుగు",
+  "english": "Telugu",
+  "rtl": false,
+  "chrome": "te"
+ },
+ {
+  "code": "mr",
+  "tag": "mr",
+  "autonym": "मराठी",
+  "english": "Marathi",
+  "rtl": false,
+  "chrome": "mr"
+ },
+ {
+  "code": "vi",
+  "tag": "vi",
+  "autonym": "Tiếng Việt",
+  "english": "Vietnamese",
+  "rtl": false,
+  "chrome": "vi"
+ },
+ {
+  "code": "ta",
+  "tag": "ta",
+  "autonym": "தமிழ்",
+  "english": "Tamil",
+  "rtl": false,
+  "chrome": "ta"
+ },
+ {
+  "code": "it",
+  "tag": "it",
+  "autonym": "Italiano",
+  "english": "Italian",
+  "rtl": false,
+  "chrome": "it"
+ },
+ {
+  "code": "tr",
+  "tag": "tr",
+  "autonym": "Türkçe",
+  "english": "Turkish",
+  "rtl": false,
+  "chrome": "tr"
+ },
+ {
+  "code": "ur",
+  "tag": "ur",
+  "autonym": "اردو",
+  "english": "Urdu",
+  "rtl": true,
+  "chrome": null
+ },
+ {
+  "code": "pa",
+  "tag": "pa",
+  "autonym": "ਪੰਜਾਬੀ",
+  "english": "Punjabi",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "uk",
+  "tag": "uk",
+  "autonym": "Українська",
+  "english": "Ukrainian",
+  "rtl": false,
+  "chrome": "uk"
+ },
+ {
+  "code": "gu",
+  "tag": "gu",
+  "autonym": "ગુજરાતી",
+  "english": "Gujarati",
+  "rtl": false,
+  "chrome": "gu"
+ },
+ {
+  "code": "th",
+  "tag": "th",
+  "autonym": "ไทย",
+  "english": "Thai",
+  "rtl": false,
+  "chrome": "th"
+ },
+ {
+  "code": "pl",
+  "tag": "pl",
+  "autonym": "Polski",
+  "english": "Polish",
+  "rtl": false,
+  "chrome": "pl"
+ },
+ {
+  "code": "ml",
+  "tag": "ml",
+  "autonym": "മലയാളം",
+  "english": "Malayalam",
+  "rtl": false,
+  "chrome": "ml"
+ },
+ {
+  "code": "kn",
+  "tag": "kn",
+  "autonym": "ಕನ್ನಡ",
+  "english": "Kannada",
+  "rtl": false,
+  "chrome": "kn"
+ },
+ {
+  "code": "or",
+  "tag": "or",
+  "autonym": "ଓଡ଼ିଆ",
+  "english": "Odia",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "my",
+  "tag": "my",
+  "autonym": "မြန်မာ",
+  "english": "Burmese",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "az",
+  "tag": "az",
+  "autonym": "Azərbaycanca",
+  "english": "Azerbaijani",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "fa",
+  "tag": "fa",
+  "autonym": "فارسی",
+  "english": "Persian",
+  "rtl": true,
+  "chrome": "fa"
+ },
+ {
+  "code": "su",
+  "tag": "su",
+  "autonym": "Basa Sunda",
+  "english": "Sundanese",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "ps",
+  "tag": "ps",
+  "autonym": "پښتو",
+  "english": "Pashto",
+  "rtl": true,
+  "chrome": null
+ },
+ {
+  "code": "ro",
+  "tag": "ro",
+  "autonym": "Română",
+  "english": "Romanian",
+  "rtl": false,
+  "chrome": "ro"
+ },
+ {
+  "code": "bho",
+  "tag": "bho",
+  "autonym": "भोजपुरी",
+  "english": "Bhojpuri",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "ha",
+  "tag": "ha",
+  "autonym": "Hausa",
+  "english": "Hausa",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "mai",
+  "tag": "mai",
+  "autonym": "मैथिली",
+  "english": "Maithili",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "ms",
+  "tag": "ms",
+  "autonym": "Bahasa Melayu",
+  "english": "Malay",
+  "rtl": false,
+  "chrome": "ms"
+ },
+ {
+  "code": "sh",
+  "tag": "sh",
+  "autonym": "Srpskohrvatski",
+  "english": "Serbo-Croatian",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "awa",
+  "tag": "awa",
+  "autonym": "अवधी",
+  "english": "Awadhi",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "uz",
+  "tag": "uz",
+  "autonym": "Oʻzbekcha",
+  "english": "Uzbek",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "yo",
+  "tag": "yo",
+  "autonym": "Yorùbá",
+  "english": "Yoruba",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "nl",
+  "tag": "nl",
+  "autonym": "Nederlands",
+  "english": "Dutch",
+  "rtl": false,
+  "chrome": "nl"
+ },
+ {
+  "code": "sd",
+  "tag": "sd",
+  "autonym": "سنڌي",
+  "english": "Sindhi",
+  "rtl": true,
+  "chrome": null
+ },
+ {
+  "code": "ig",
+  "tag": "ig",
+  "autonym": "Igbo",
+  "english": "Igbo",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "am",
+  "tag": "am",
+  "autonym": "አማርኛ",
+  "english": "Amharic",
+  "rtl": false,
+  "chrome": "am"
+ },
+ {
+  "code": "om",
+  "tag": "om",
+  "autonym": "Afaan Oromoo",
+  "english": "Oromo",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "id",
+  "tag": "id",
+  "autonym": "Bahasa Indonesia",
+  "english": "Indonesian",
+  "rtl": false,
+  "chrome": "id"
+ },
+ {
+  "code": "fil",
+  "tag": "fil",
+  "autonym": "Filipino",
+  "english": "Tagalog (Filipino)",
+  "rtl": false,
+  "chrome": "fil"
+ },
+ {
+  "code": "ne",
+  "tag": "ne",
+  "autonym": "नेपाली",
+  "english": "Nepali",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "as",
+  "tag": "as",
+  "autonym": "অসমীয়া",
+  "english": "Assamese",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "skr",
+  "tag": "skr",
+  "autonym": "سرائیکی",
+  "english": "Saraiki",
+  "rtl": true,
+  "chrome": null
+ },
+ {
+  "code": "ceb",
+  "tag": "ceb",
+  "autonym": "Cebuano",
+  "english": "Cebuano",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "hu",
+  "tag": "hu",
+  "autonym": "Magyar",
+  "english": "Hungarian",
+  "rtl": false,
+  "chrome": "hu"
+ },
+ {
+  "code": "ctg",
+  "tag": "ctg",
+  "autonym": "চাটগাঁইয়া",
+  "english": "Chittagonian",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "za",
+  "tag": "za",
+  "autonym": "Vahcuengh",
+  "english": "Zhuang",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "sn",
+  "tag": "sn",
+  "autonym": "chiShona",
+  "english": "Shona",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "mad",
+  "tag": "mad",
+  "autonym": "Madhura",
+  "english": "Madurese",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "si",
+  "tag": "si",
+  "autonym": "සිංහල",
+  "english": "Sinhala",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "mwr",
+  "tag": "mwr",
+  "autonym": "मारवाड़ी",
+  "english": "Marwari",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "mag",
+  "tag": "mag",
+  "autonym": "मगही",
+  "english": "Magahi",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "bgc",
+  "tag": "bgc",
+  "autonym": "हरियाणवी",
+  "english": "Haryanvi",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "el",
+  "tag": "el",
+  "autonym": "Ελληνικά",
+  "english": "Greek",
+  "rtl": false,
+  "chrome": "el"
+ },
+ {
+  "code": "cs",
+  "tag": "cs",
+  "autonym": "Čeština",
+  "english": "Czech",
+  "rtl": false,
+  "chrome": "cs"
+ },
+ {
+  "code": "hne",
+  "tag": "hne",
+  "autonym": "छत्तीसगढ़ी",
+  "english": "Chhattisgarhi",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "ff",
+  "tag": "ff",
+  "autonym": "Fulfulde",
+  "english": "Fula",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "dcc",
+  "tag": "dcc",
+  "autonym": "دکنی",
+  "english": "Dakhini",
+  "rtl": true,
+  "chrome": null
+ },
+ {
+  "code": "mg",
+  "tag": "mg",
+  "autonym": "Malagasy",
+  "english": "Malagasy",
+  "rtl": false,
+  "chrome": null
+ },
+ {
+  "code": "be",
+  "tag": "be",
+  "autonym": "Беларуская",
+  "english": "Belarusian",
+  "rtl": false,
+  "chrome": null
+ }
+]

@@ -1,0 +1,1237 @@
+{
+ "categories": [
+  {
+   "id": "editors",
+   "name": {
+    "en": "Code editors & IDEs"
+   },
+   "apps": [
+    {
+     "id": "vscode",
+     "name": "Visual Studio Code",
+     "windows": [
+      "code.exe",
+      "code - insiders.exe"
+     ],
+     "macos": [
+      "com.microsoft.vscode",
+      "com.microsoft.vscodeinsiders"
+     ],
+     "linux": [
+      "code",
+      "code-insiders",
+      "code-oss"
+     ]
+    },
+    {
+     "id": "vscodium",
+     "name": "VSCodium",
+     "windows": [
+      "codium.exe"
+     ],
+     "macos": [
+      "com.vscodium"
+     ],
+     "linux": [
+      "codium",
+      "vscodium"
+     ]
+    },
+    {
+     "id": "cursor",
+     "name": "Cursor",
+     "windows": [
+      "cursor.exe"
+     ],
+     "macos": [
+      "com.todesktop.230313mzl4w4u92"
+     ],
+     "linux": [
+      "cursor"
+     ]
+    },
+    {
+     "id": "windsurf",
+     "name": "Windsurf",
+     "windows": [
+      "windsurf.exe"
+     ],
+     "macos": [
+      "com.exafunction.windsurf"
+     ],
+     "linux": [
+      "windsurf"
+     ]
+    },
+    {
+     "id": "zed",
+     "name": "Zed",
+     "windows": [
+      "zed.exe"
+     ],
+     "macos": [
+      "dev.zed.zed"
+     ],
+     "linux": [
+      "zed",
+      "zeditor",
+      "zed-editor",
+      "dev.zed.zed"
+     ]
+    },
+    {
+     "id": "positron",
+     "name": "Positron",
+     "windows": [
+      "positron.exe"
+     ]
+    },
+    {
+     "id": "trae",
+     "name": "Trae",
+     "windows": [
+      "trae.exe"
+     ]
+    },
+    {
+     "id": "kiro",
+     "name": "Kiro",
+     "windows": [
+      "kiro.exe"
+     ]
+    },
+    {
+     "id": "visualstudio",
+     "name": "Visual Studio",
+     "windows": [
+      "devenv.exe"
+     ]
+    },
+    {
+     "id": "blend",
+     "name": "Blend for Visual Studio",
+     "windows": [
+      "blend.exe"
+     ]
+    },
+    {
+     "id": "xcode",
+     "name": "Xcode",
+     "macos": [
+      "com.apple.dt.xcode"
+     ]
+    },
+    {
+     "id": "idea",
+     "name": "IntelliJ IDEA",
+     "windows": [
+      "idea64.exe",
+      "idea.exe"
+     ],
+     "macos": [
+      "com.jetbrains.intellij",
+      "com.jetbrains.intellij.ce"
+     ],
+     "linux": [
+      "idea",
+      "jetbrains-idea",
+      "jetbrains-idea-ce"
+     ]
+    },
+    {
+     "id": "pycharm",
+     "name": "PyCharm",
+     "windows": [
+      "pycharm64.exe",
+      "pycharm.exe"
+     ],
+     "macos": [
+      "com.jetbrains.pycharm",
+      "com.jetbrains.pycharm.ce"
+     ],
+     "linux": [
+      "pycharm",
+      "jetbrains-pycharm",
+      "jetbrains-pycharm-ce"
+     ]
+    },
+    {
+     "id": "webstorm",
+     "name": "WebStorm",
+     "windows": [
+      "webstorm64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.webstorm"
+     ],
+     "linux": [
+      "webstorm",
+      "jetbrains-webstorm"
+     ]
+    },
+    {
+     "id": "phpstorm",
+     "name": "PhpStorm",
+     "windows": [
+      "phpstorm64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.phpstorm"
+     ],
+     "linux": [
+      "phpstorm",
+      "jetbrains-phpstorm"
+     ]
+    },
+    {
+     "id": "clion",
+     "name": "CLion",
+     "windows": [
+      "clion64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.clion"
+     ],
+     "linux": [
+      "clion",
+      "jetbrains-clion"
+     ]
+    },
+    {
+     "id": "rider",
+     "name": "Rider",
+     "windows": [
+      "rider64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.rider"
+     ],
+     "linux": [
+      "rider",
+      "jetbrains-rider"
+     ]
+    },
+    {
+     "id": "goland",
+     "name": "GoLand",
+     "windows": [
+      "goland64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.goland"
+     ],
+     "linux": [
+      "goland",
+      "jetbrains-goland"
+     ]
+    },
+    {
+     "id": "rubymine",
+     "name": "RubyMine",
+     "windows": [
+      "rubymine64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.rubymine"
+     ],
+     "linux": [
+      "rubymine",
+      "jetbrains-rubymine"
+     ]
+    },
+    {
+     "id": "rustrover",
+     "name": "RustRover",
+     "windows": [
+      "rustrover64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.rustrover"
+     ],
+     "linux": [
+      "rustrover",
+      "jetbrains-rustrover"
+     ]
+    },
+    {
+     "id": "dataspell",
+     "name": "DataSpell",
+     "windows": [
+      "dataspell64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.dataspell"
+     ],
+     "linux": [
+      "dataspell",
+      "jetbrains-dataspell"
+     ]
+    },
+    {
+     "id": "aqua",
+     "name": "Aqua",
+     "windows": [
+      "aqua64.exe"
+     ]
+    },
+    {
+     "id": "fleet",
+     "name": "Fleet",
+     "windows": [
+      "fleet.exe"
+     ],
+     "macos": [
+      "com.jetbrains.fleet"
+     ],
+     "linux": [
+      "fleet",
+      "jetbrains-fleet"
+     ]
+    },
+    {
+     "id": "appcode",
+     "name": "AppCode",
+     "macos": [
+      "com.jetbrains.appcode"
+     ]
+    },
+    {
+     "id": "androidstudio",
+     "name": "Android Studio",
+     "windows": [
+      "studio64.exe"
+     ],
+     "macos": [
+      "com.google.android.studio"
+     ],
+     "linux": [
+      "jetbrains-studio",
+      "android-studio",
+      "studio"
+     ]
+    },
+    {
+     "id": "qtcreator",
+     "name": "Qt Creator",
+     "windows": [
+      "qtcreator.exe"
+     ],
+     "macos": [
+      "org.qt-project.qtcreator"
+     ],
+     "linux": [
+      "qtcreator",
+      "org.qt-project.qtcreator"
+     ]
+    },
+    {
+     "id": "sublime",
+     "name": "Sublime Text",
+     "windows": [
+      "sublime_text.exe"
+     ],
+     "macos": [
+      "com.sublimetext.4",
+      "com.sublimetext.3"
+     ],
+     "linux": [
+      "sublime_text",
+      "sublime-text"
+     ]
+    },
+    {
+     "id": "notepadpp",
+     "name": "Notepad++",
+     "windows": [
+      "notepad++.exe"
+     ]
+    },
+    {
+     "id": "eclipse",
+     "name": "Eclipse",
+     "windows": [
+      "eclipse.exe"
+     ],
+     "macos": [
+      "org.eclipse.platform.ide"
+     ],
+     "linux": [
+      "eclipse"
+     ]
+    },
+    {
+     "id": "netbeans",
+     "name": "Apache NetBeans",
+     "windows": [
+      "netbeans64.exe",
+      "netbeans.exe"
+     ],
+     "macos": [
+      "org.apache.netbeans"
+     ],
+     "linux": [
+      "netbeans"
+     ]
+    },
+    {
+     "id": "vim",
+     "name": "Vim (gvim / MacVim)",
+     "windows": [
+      "gvim.exe"
+     ],
+     "macos": [
+      "org.vim.macvim"
+     ],
+     "linux": [
+      "gvim"
+     ]
+    },
+    {
+     "id": "nvimqt",
+     "name": "Neovim Qt",
+     "windows": [
+      "nvim-qt.exe"
+     ],
+     "linux": [
+      "nvim-qt"
+     ]
+    },
+    {
+     "id": "neovide",
+     "name": "Neovide",
+     "windows": [
+      "neovide.exe"
+     ],
+     "macos": [
+      "com.neovide.neovide"
+     ],
+     "linux": [
+      "neovide"
+     ]
+    },
+    {
+     "id": "emacs",
+     "name": "Emacs",
+     "windows": [
+      "emacs.exe",
+      "runemacs.exe"
+     ],
+     "macos": [
+      "org.gnu.emacs"
+     ],
+     "linux": [
+      "emacs"
+     ]
+    },
+    {
+     "id": "kate",
+     "name": "Kate",
+     "windows": [
+      "kate.exe"
+     ],
+     "linux": [
+      "kate",
+      "org.kde.kate"
+     ]
+    },
+    {
+     "id": "lapce",
+     "name": "Lapce",
+     "windows": [
+      "lapce.exe"
+     ],
+     "macos": [
+      "io.lapce"
+     ],
+     "linux": [
+      "lapce",
+      "dev.lapce.lapce"
+     ]
+    },
+    {
+     "id": "codeblocks",
+     "name": "Code::Blocks",
+     "windows": [
+      "codeblocks.exe"
+     ],
+     "linux": [
+      "codeblocks"
+     ]
+    },
+    {
+     "id": "lazarus",
+     "name": "Lazarus",
+     "windows": [
+      "lazarus.exe"
+     ]
+    },
+    {
+     "id": "geany",
+     "name": "Geany",
+     "windows": [
+      "geany.exe"
+     ],
+     "linux": [
+      "geany",
+      "org.geany.geany"
+     ]
+    },
+    {
+     "id": "pulsar",
+     "name": "Pulsar",
+     "windows": [
+      "pulsar.exe"
+     ],
+     "macos": [
+      "dev.pulsar-edit.pulsar"
+     ],
+     "linux": [
+      "pulsar"
+     ]
+    },
+    {
+     "id": "unityhub",
+     "name": "Unity Hub",
+     "windows": [
+      "unityhub.exe"
+     ]
+    },
+    {
+     "id": "nova",
+     "name": "Nova",
+     "macos": [
+      "com.panic.nova"
+     ]
+    },
+    {
+     "id": "bbedit",
+     "name": "BBEdit",
+     "macos": [
+      "com.barebones.bbedit"
+     ]
+    },
+    {
+     "id": "coteditor",
+     "name": "CotEditor",
+     "macos": [
+      "com.coteditor.coteditor"
+     ]
+    },
+    {
+     "id": "gnomebuilder",
+     "name": "GNOME Builder",
+     "linux": [
+      "gnome-builder",
+      "org.gnome.builder"
+     ]
+    },
+    {
+     "id": "kdevelop",
+     "name": "KDevelop",
+     "linux": [
+      "kdevelop",
+      "org.kde.kdevelop"
+     ]
+    },
+    {
+     "id": "notepadqq",
+     "name": "Notepadqq",
+     "linux": [
+      "notepadqq"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "terminals",
+   "name": {
+    "en": "Terminals & consoles"
+   },
+   "apps": [
+    {
+     "id": "winterminal",
+     "name": "Windows Terminal",
+     "windows": [
+      "windowsterminal.exe"
+     ]
+    },
+    {
+     "id": "openconsole",
+     "name": "Console Host (OpenConsole)",
+     "windows": [
+      "openconsole.exe"
+     ]
+    },
+    {
+     "id": "cmd",
+     "name": "Command Prompt",
+     "windows": [
+      "cmd.exe"
+     ]
+    },
+    {
+     "id": "powershell",
+     "name": "Windows PowerShell",
+     "windows": [
+      "powershell.exe"
+     ]
+    },
+    {
+     "id": "pwsh",
+     "name": "PowerShell 7",
+     "windows": [
+      "pwsh.exe"
+     ]
+    },
+    {
+     "id": "powershellise",
+     "name": "PowerShell ISE",
+     "windows": [
+      "powershell_ise.exe"
+     ]
+    },
+    {
+     "id": "wsl",
+     "name": "WSL",
+     "windows": [
+      "wsl.exe",
+      "bash.exe"
+     ]
+    },
+    {
+     "id": "mintty",
+     "name": "Mintty (Git Bash, Cygwin)",
+     "windows": [
+      "mintty.exe"
+     ]
+    },
+    {
+     "id": "conemu",
+     "name": "ConEmu",
+     "windows": [
+      "conemu64.exe",
+      "conemu.exe"
+     ]
+    },
+    {
+     "id": "putty",
+     "name": "PuTTY",
+     "windows": [
+      "putty.exe"
+     ]
+    },
+    {
+     "id": "mobaxterm",
+     "name": "MobaXterm",
+     "windows": [
+      "mobaxterm.exe"
+     ]
+    },
+    {
+     "id": "fluentterminal",
+     "name": "Fluent Terminal",
+     "windows": [
+      "fluentterminal.app.exe"
+     ]
+    },
+    {
+     "id": "macterminal",
+     "name": "Terminal",
+     "macos": [
+      "com.apple.terminal"
+     ]
+    },
+    {
+     "id": "iterm2",
+     "name": "iTerm2",
+     "macos": [
+      "com.googlecode.iterm2"
+     ]
+    },
+    {
+     "id": "alacritty",
+     "name": "Alacritty",
+     "windows": [
+      "alacritty.exe"
+     ],
+     "macos": [
+      "org.alacritty",
+      "io.alacritty"
+     ],
+     "linux": [
+      "alacritty"
+     ]
+    },
+    {
+     "id": "kitty",
+     "name": "kitty",
+     "windows": [
+      "kitty.exe"
+     ],
+     "macos": [
+      "net.kovidgoyal.kitty"
+     ],
+     "linux": [
+      "kitty"
+     ]
+    },
+    {
+     "id": "wezterm",
+     "name": "WezTerm",
+     "windows": [
+      "wezterm-gui.exe"
+     ],
+     "macos": [
+      "com.github.wez.wezterm"
+     ],
+     "linux": [
+      "wezterm-gui",
+      "org.wezfurlong.wezterm"
+     ]
+    },
+    {
+     "id": "tabby",
+     "name": "Tabby",
+     "windows": [
+      "tabby.exe"
+     ],
+     "macos": [
+      "org.tabby"
+     ],
+     "linux": [
+      "tabby"
+     ]
+    },
+    {
+     "id": "hyper",
+     "name": "Hyper",
+     "windows": [
+      "hyper.exe"
+     ],
+     "macos": [
+      "co.zeit.hyper"
+     ]
+    },
+    {
+     "id": "termius",
+     "name": "Termius",
+     "windows": [
+      "termius.exe"
+     ],
+     "macos": [
+      "com.termius-dmg.mac"
+     ]
+    },
+    {
+     "id": "warp",
+     "name": "Warp",
+     "windows": [
+      "warp.exe"
+     ],
+     "macos": [
+      "dev.warp.warp-stable"
+     ],
+     "linux": [
+      "warp-terminal",
+      "dev.warp.warp"
+     ]
+    },
+    {
+     "id": "ghostty",
+     "name": "Ghostty",
+     "macos": [
+      "com.mitchellh.ghostty"
+     ],
+     "linux": [
+      "ghostty",
+      "com.mitchellh.ghostty"
+     ]
+    },
+    {
+     "id": "gnometerminal",
+     "name": "GNOME Terminal",
+     "linux": [
+      "gnome-terminal-server",
+      "gnome-terminal",
+      "org.gnome.terminal"
+     ]
+    },
+    {
+     "id": "gnomeconsole",
+     "name": "GNOME Console",
+     "linux": [
+      "kgx",
+      "org.gnome.console"
+     ]
+    },
+    {
+     "id": "ptyxis",
+     "name": "Ptyxis",
+     "linux": [
+      "ptyxis",
+      "org.gnome.ptyxis"
+     ]
+    },
+    {
+     "id": "konsole",
+     "name": "Konsole",
+     "linux": [
+      "konsole",
+      "org.kde.konsole"
+     ]
+    },
+    {
+     "id": "yakuake",
+     "name": "Yakuake",
+     "linux": [
+      "yakuake",
+      "org.kde.yakuake"
+     ]
+    },
+    {
+     "id": "xterm",
+     "name": "XTerm",
+     "linux": [
+      "xterm",
+      "uxterm"
+     ]
+    },
+    {
+     "id": "urxvt",
+     "name": "rxvt-unicode",
+     "linux": [
+      "urxvt",
+      "rxvt"
+     ]
+    },
+    {
+     "id": "st",
+     "name": "st",
+     "linux": [
+      "st",
+      "st-256color"
+     ]
+    },
+    {
+     "id": "foot",
+     "name": "foot",
+     "linux": [
+      "foot",
+      "footclient"
+     ]
+    },
+    {
+     "id": "tilix",
+     "name": "Tilix",
+     "linux": [
+      "tilix",
+      "com.gexperts.tilix"
+     ]
+    },
+    {
+     "id": "terminator",
+     "name": "Terminator",
+     "linux": [
+      "terminator"
+     ]
+    },
+    {
+     "id": "xfceterminal",
+     "name": "Xfce Terminal",
+     "linux": [
+      "xfce4-terminal"
+     ]
+    },
+    {
+     "id": "mateterminal",
+     "name": "MATE Terminal",
+     "linux": [
+      "mate-terminal"
+     ]
+    },
+    {
+     "id": "lxterminal",
+     "name": "LXTerminal",
+     "linux": [
+      "lxterminal"
+     ]
+    },
+    {
+     "id": "qterminal",
+     "name": "QTerminal",
+     "linux": [
+      "qterminal"
+     ]
+    },
+    {
+     "id": "terminology",
+     "name": "Terminology",
+     "linux": [
+      "terminology"
+     ]
+    },
+    {
+     "id": "guake",
+     "name": "Guake",
+     "linux": [
+      "guake"
+     ]
+    },
+    {
+     "id": "tilda",
+     "name": "Tilda",
+     "linux": [
+      "tilda"
+     ]
+    },
+    {
+     "id": "coolretroterm",
+     "name": "cool-retro-term",
+     "linux": [
+      "cool-retro-term"
+     ]
+    },
+    {
+     "id": "blackbox",
+     "name": "Black Box",
+     "linux": [
+      "blackbox",
+      "com.raggesilver.blackbox"
+     ]
+    },
+    {
+     "id": "contour",
+     "name": "Contour",
+     "linux": [
+      "contour"
+     ]
+    },
+    {
+     "id": "rio",
+     "name": "Rio",
+     "linux": [
+      "rio"
+     ]
+    },
+    {
+     "id": "cosmicterm",
+     "name": "COSMIC Terminal",
+     "linux": [
+      "cosmic-term",
+      "com.system76.cosmicterm"
+     ]
+    },
+    {
+     "id": "deepinterminal",
+     "name": "Deepin Terminal",
+     "linux": [
+      "deepin-terminal"
+     ]
+    },
+    {
+     "id": "elementaryterminal",
+     "name": "elementary Terminal",
+     "linux": [
+      "io.elementary.terminal"
+     ]
+    },
+    {
+     "id": "sakura",
+     "name": "Sakura",
+     "linux": [
+      "sakura"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "db-api",
+   "name": {
+    "en": "Database & API tools"
+   },
+   "apps": [
+    {
+     "id": "heidisql",
+     "name": "HeidiSQL",
+     "windows": [
+      "heidisql.exe"
+     ]
+    },
+    {
+     "id": "dbschema",
+     "name": "DbSchema",
+     "windows": [
+      "dbschema.exe"
+     ]
+    },
+    {
+     "id": "dbeaver",
+     "name": "DBeaver",
+     "windows": [
+      "dbeaver.exe"
+     ],
+     "macos": [
+      "org.jkiss.dbeaver.core.product"
+     ],
+     "linux": [
+      "dbeaver",
+      "org.jkiss.dbeaver"
+     ]
+    },
+    {
+     "id": "datagrip",
+     "name": "DataGrip",
+     "windows": [
+      "datagrip64.exe"
+     ],
+     "macos": [
+      "com.jetbrains.datagrip"
+     ],
+     "linux": [
+      "datagrip",
+      "jetbrains-datagrip"
+     ]
+    },
+    {
+     "id": "ssms",
+     "name": "SQL Server Management Studio",
+     "windows": [
+      "ssms.exe"
+     ]
+    },
+    {
+     "id": "azuredatastudio",
+     "name": "Azure Data Studio",
+     "windows": [
+      "azuredatastudio.exe"
+     ]
+    },
+    {
+     "id": "mysqlworkbench",
+     "name": "MySQL Workbench",
+     "windows": [
+      "mysqlworkbench.exe"
+     ],
+     "macos": [
+      "com.oracle.workbench.mysqlworkbench"
+     ],
+     "linux": [
+      "mysql-workbench",
+      "mysql-workbench-bin"
+     ]
+    },
+    {
+     "id": "pgadmin",
+     "name": "pgAdmin",
+     "windows": [
+      "pgadmin4.exe"
+     ],
+     "macos": [
+      "org.pgadmin.pgadmin4"
+     ],
+     "linux": [
+      "pgadmin4"
+     ]
+    },
+    {
+     "id": "tableplus",
+     "name": "TablePlus",
+     "windows": [
+      "tableplus.exe"
+     ],
+     "macos": [
+      "com.tinyapp.tableplus"
+     ]
+    },
+    {
+     "id": "navicat",
+     "name": "Navicat",
+     "windows": [
+      "navicat.exe"
+     ]
+    },
+    {
+     "id": "sqldeveloper",
+     "name": "Oracle SQL Developer",
+     "windows": [
+      "sqldeveloper64w.exe",
+      "sqldeveloper.exe"
+     ]
+    },
+    {
+     "id": "toad",
+     "name": "Toad",
+     "windows": [
+      "toad.exe"
+     ]
+    },
+    {
+     "id": "mongodbcompass",
+     "name": "MongoDB Compass",
+     "windows": [
+      "mongodbcompass.exe"
+     ],
+     "macos": [
+      "com.mongodb.compass"
+     ],
+     "linux": [
+      "mongodb-compass"
+     ]
+    },
+    {
+     "id": "redisinsight",
+     "name": "RedisInsight",
+     "windows": [
+      "redisinsight.exe"
+     ],
+     "linux": [
+      "redisinsight"
+     ]
+    },
+    {
+     "id": "dbgate",
+     "name": "DbGate",
+     "windows": [
+      "dbgate.exe"
+     ],
+     "linux": [
+      "dbgate"
+     ]
+    },
+    {
+     "id": "beekeeper",
+     "name": "Beekeeper Studio",
+     "windows": [
+      "beekeeper studio.exe"
+     ],
+     "macos": [
+      "io.beekeeperstudio.desktop"
+     ],
+     "linux": [
+      "beekeeper-studio"
+     ]
+    },
+    {
+     "id": "sequelace",
+     "name": "Sequel Ace",
+     "macos": [
+      "com.sequel-ace.sequel-ace"
+     ]
+    },
+    {
+     "id": "sqlitebrowser",
+     "name": "DB Browser for SQLite",
+     "linux": [
+      "sqlitebrowser"
+     ]
+    },
+    {
+     "id": "postman",
+     "name": "Postman",
+     "windows": [
+      "postman.exe"
+     ],
+     "macos": [
+      "com.postmanlabs.mac"
+     ],
+     "linux": [
+      "postman"
+     ]
+    },
+    {
+     "id": "insomnia",
+     "name": "Insomnia",
+     "windows": [
+      "insomnia.exe"
+     ],
+     "macos": [
+      "com.insomnia.app"
+     ],
+     "linux": [
+      "insomnia"
+     ]
+    },
+    {
+     "id": "bruno",
+     "name": "Bruno",
+     "windows": [
+      "bruno.exe"
+     ],
+     "macos": [
+      "com.usebruno.app"
+     ],
+     "linux": [
+      "bruno"
+     ]
+    },
+    {
+     "id": "httpie",
+     "name": "HTTPie",
+     "windows": [
+      "httpie.exe"
+     ],
+     "macos": [
+      "com.httpie.desktop"
+     ]
+    }
+   ]
+  }
+ ],
+ "browsers": {
+  "windows": [
+   "chrome.exe",
+   "msedge.exe",
+   "firefox.exe",
+   "brave.exe",
+   "opera.exe",
+   "vivaldi.exe",
+   "browser.exe",
+   "arc.exe",
+   "librewolf.exe",
+   "waterfox.exe",
+   "floorp.exe",
+   "zen.exe",
+   "chromium.exe",
+   "thorium.exe"
+  ],
+  "macos": [
+   "com.google.chrome",
+   "com.google.chrome.beta",
+   "com.microsoft.edgemac",
+   "org.mozilla.firefox",
+   "com.brave.browser",
+   "com.operasoftware.opera",
+   "com.vivaldi.vivaldi",
+   "ru.yandex.desktop.yandex-browser",
+   "company.thebrowser.browser",
+   "org.chromium.chromium",
+   "io.gitlab.librewolf-community",
+   "app.zen-browser.zen"
+  ],
+  "linux": [
+   "chrome",
+   "google-chrome",
+   "google-chrome-stable",
+   "chromium",
+   "chromium-browser",
+   "microsoft-edge",
+   "msedge",
+   "firefox",
+   "firefox-esr",
+   "firefox-bin",
+   "org.mozilla.firefox",
+   "brave",
+   "brave-browser",
+   "opera",
+   "vivaldi",
+   "vivaldi-bin",
+   "yandex-browser",
+   "yandex_browser",
+   "librewolf",
+   "floorp",
+   "zen",
+   "zen-bin",
+   "thorium"
+  ]
+ }
+}

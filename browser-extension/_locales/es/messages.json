@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Cambia la distribución del teclado según el sitio web. Solo envía el dominio de la pestaña activa a la aplicación Keyboard Changer de este equipo."
+  },
+  "optionsIntro": {
+    "message": "Puerto de la aplicación Keyboard Changer (el mismo que en la aplicación, por defecto 47863)."
+  },
+  "optionsPort": {
+    "message": "Puerto:"
+  },
+  "optionsSave": {
+    "message": "Guardar"
+  },
+  "optionsTest": {
+    "message": "Probar conexión"
+  },
+  "optionsSaved": {
+    "message": "Guardado."
+  },
+  "optionsConnected": {
+    "message": "Conectado a Keyboard Changer."
+  },
+  "optionsNotApp": {
+    "message": "Otra cosa responde en este puerto."
+  },
+  "optionsNotRunning": {
+    "message": "Keyboard Changer no se está ejecutando o usa otro puerto."
+  }
+}

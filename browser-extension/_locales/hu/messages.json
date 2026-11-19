@@ -1,0 +1,32 @@
+{
+  "name": {
+    "message": "Keyboard Changer"
+  },
+  "description": {
+    "message": "Webhely szerint vált billentyűzetkiosztást. Csak az aktív lap domainjét küldi el a számítógépen futó Keyboard Changer alkalmazásnak."
+  },
+  "optionsIntro": {
+    "message": "A Keyboard Changer alkalmazás portja (ugyanaz, mint az alkalmazásban, alapértelmezés: 47863)."
+  },
+  "optionsPort": {
+    "message": "Port:"
+  },
+  "optionsSave": {
+    "message": "Mentés"
+  },
+  "optionsTest": {
+    "message": "Kapcsolat tesztelése"
+  },
+  "optionsSaved": {
+    "message": "Mentve."
+  },
+  "optionsConnected": {
+    "message": "Csatlakozva a Keyboard Changerhez."
+  },
+  "optionsNotApp": {
+    "message": "Ezen a porton valami más válaszol."
+  },
+  "optionsNotRunning": {
+    "message": "A Keyboard Changer nem fut, vagy másik portot használ."
+  }
+}
