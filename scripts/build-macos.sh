@@ -13,7 +13,7 @@ QT_DIR="${QT_DIR:?Set QT_DIR to the Qt macOS kit, e.g. ~/Qt/6.8.3/macos}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BUILD="$ROOT/build/release-macos"
 DIST="$ROOT/dist/macos"
-APP="$BUILD/Keyboard Changer.app"
+APP="$BUILD/Keyboard Switcher.app"
 
 rm -rf "$BUILD" && mkdir -p "$DIST"
 cmake -S "$ROOT" -B "$BUILD" -G Ninja \
@@ -30,9 +30,9 @@ if [[ -n "${SIGN_ID:-}" ]]; then
   codesign --force --deep --options runtime --timestamp --sign "$SIGN_ID" "$APP"
 fi
 
-DMG="$DIST/KeyboardChanger-$VERSION.dmg"
+DMG="$DIST/KeyboardSwitcher-$VERSION.dmg"
 rm -f "$DMG"
-hdiutil create -volname "Keyboard Changer" -srcfolder "$APP" -ov -format UDZO "$DMG"
+hdiutil create -volname "Keyboard Switcher" -srcfolder "$APP" -ov -format UDZO "$DMG"
 
 if [[ -n "${SIGN_ID:-}" ]]; then
   codesign --force --sign "$SIGN_ID" "$DMG"

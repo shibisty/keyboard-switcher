@@ -165,7 +165,7 @@ bool isPackaged()
 }
 
 const char kRunKey[] = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run";
-const char kRunValue[] = "KeyboardChanger";
+const char kRunValue[] = "KeyboardSwitcher";
 
 } // namespace
 

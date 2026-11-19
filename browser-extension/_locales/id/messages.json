@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Mengalihkan tata letak papan ketik berdasarkan situs web. Hanya mengirim domain tab aktif ke aplikasi Keyboard Changer di komputer ini."
+    "message": "Mengalihkan tata letak papan ketik berdasarkan situs web. Hanya mengirim domain tab aktif ke aplikasi Keyboard Switcher di komputer ini."
   },
   "optionsIntro": {
-    "message": "Port aplikasi Keyboard Changer (sama seperti di aplikasi, default 47863)."
+    "message": "Port aplikasi Keyboard Switcher (sama seperti di aplikasi, default 47863)."
   },
   "optionsPort": {
     "message": "Port:"
@@ -21,12 +21,12 @@
     "message": "Tersimpan."
   },
   "optionsConnected": {
-    "message": "Terhubung ke Keyboard Changer."
+    "message": "Terhubung ke Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Ada hal lain yang merespons di port ini."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer tidak berjalan atau menggunakan port lain."
+    "message": "Keyboard Switcher tidak berjalan atau menggunakan port lain."
   }
 }

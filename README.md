@@ -1,4 +1,4 @@
-# Keyboard Changer
+# Keyboard Switcher
 
 Утилита для трея и строки меню. Переключает раскладку клавиатуры, когда фокус получает окно
 выбранного приложения или вкладка выбранного сайта. Когда фокус уходит, возвращает прежнюю раскладку.
@@ -35,7 +35,7 @@
 ## Поддержка Linux
 
 Бэкенд выбирается автоматически по переменным сеанса. Принудительно его можно задать через
-`KEYBOARD_CHANGER_BACKEND=x11|kde|gnome|sway|hyprland`.
+`KEYBOARD_SWITCHER_BACKEND=x11|kde|gnome|sway|hyprland`.
 
 | Сеанс | Как работает | Что нужно |
 |---|---|---|
@@ -52,9 +52,9 @@
 **Расширение GNOME.** Пакеты .deb и .rpm ставят его сами (нужную версию выбирает `build-linux.sh`). Вручную
 (для GNOME 42–44 вместо `gnome-extension` взять `gnome-extension-legacy`):
 ```bash
-cp -r gnome-extension/keyboard-changer@keyboardchanger.github.io ~/.local/share/gnome-shell/extensions/
+cp -r gnome-extension/keyboard-switcher@keyboardswitcher.github.io ~/.local/share/gnome-shell/extensions/
 # выйти из сеанса и войти снова, затем:
-gnome-extensions enable keyboard-changer@keyboardchanger.github.io
+gnome-extensions enable keyboard-switcher@keyboardswitcher.github.io
 ```
 Чтобы иконка появилась в трее GNOME, нужно расширение AppIndicator. В Ubuntu оно есть по умолчанию, в чистом GNOME (Fedora, Debian) его нужно поставить.
 
@@ -68,7 +68,7 @@ gnome-extensions enable keyboard-changer@keyboardchanger.github.io
 * Для разработки в Chromium-браузерах: `chrome://extensions` → «Режим разработчика» →
   «Загрузить распакованное» → папка `browser-extension`.
 * Для разработки в Firefox: `about:debugging` → «Этот Firefox» → «Загрузить временное дополнение» →
-  сначала собрать `dist/extension/keyboard-changer-firefox.zip` (см. ниже) и выбрать его.
+  сначала собрать `dist/extension/keyboard-switcher-firefox.zip` (см. ниже) и выбрать его.
 * Для публикации: `python scripts/pack_extension.py` создаёт архивы для Chrome Web Store,
   Edge Add-ons и addons.mozilla.org в `dist/extension/`.
 
@@ -97,7 +97,7 @@ gnome-extensions enable keyboard-changer@keyboardchanger.github.io
    Скрипт проверяет конфиг и версию. Store требует 4 числа с последним `0`, и каждая загрузка
    должна быть выше предыдущей. Затем он делает чистые Release-сборки x64 и ARM64, проверяет
    каждый пакет (identity, версия exe, отсутствие debug-DLL) и собирает
-   `dist\store\<версия>\KeyboardChanger_<версия>_arm64_x64.msixupload`:
+   `dist\store\<версия>\KeyboardSwitcher_<версия>_arm64_x64.msixupload`:
    `.msixbundle` вместе с символами `.appxsym` для отчётов о сбоях.
 3. Загрузите `.msixupload` в Partner Center → *Submission → Packages*.
    Для возможности `runFullTrust` Store попросит короткое обоснование, например
@@ -136,7 +136,7 @@ QT_DIR=~/Qt/6.8.3/macos bash scripts/build-macos.sh 1.1.0.0
 # подпись и нотаризация (иначе Gatekeeper предупредит при первом запуске):
 SIGN_ID="Developer ID Application: Имя (TEAMID)" NOTARY_PROFILE=профиль QT_DIR=… bash scripts/build-macos.sh 1.1.0.0
 ```
-На выходе `dist/macos/KeyboardChanger-<версия>.dmg`, универсальная сборка arm64 и x86_64.
+На выходе `dist/macos/KeyboardSwitcher-<версия>.dmg`, универсальная сборка arm64 и x86_64.
 Программа живёт в строке меню без иконки в Dock (`LSUIElement`). Специальных разрешений не нужно.
 
 ### Linux
@@ -179,8 +179,8 @@ bash scripts/build-linux.sh 1.1.0.0   # dist/linux: .deb, .rpm (если ест�
 
 | ОС | Файл |
 |---|---|
-| Windows | `%APPDATA%\KeyboardChanger\KeyboardChanger.ini` (из Store: `%LOCALAPPDATA%\Packages\<пакет>\LocalCache\Roaming\…`) |
-| macOS, Linux | `~/.config/KeyboardChanger/KeyboardChanger.ini` |
+| Windows | `%APPDATA%\KeyboardSwitcher\KeyboardSwitcher.ini` (из Store: `%LOCALAPPDATA%\Packages\<пакет>\LocalCache\Roaming\…`) |
+| macOS, Linux | `~/.config/KeyboardSwitcher/KeyboardSwitcher.ini` |
 
 Правила версии 1.0 (`process=`) читаются автоматически.
 

@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Chuyển bố cục bàn phím theo trang web. Chỉ gửi tên miền của thẻ đang hoạt động tới ứng dụng Keyboard Changer trên máy tính này."
+    "message": "Chuyển bố cục bàn phím theo trang web. Chỉ gửi tên miền của thẻ đang hoạt động tới ứng dụng Keyboard Switcher trên máy tính này."
   },
   "optionsIntro": {
-    "message": "Cổng của ứng dụng Keyboard Changer (giống trong ứng dụng, mặc định 47863)."
+    "message": "Cổng của ứng dụng Keyboard Switcher (giống trong ứng dụng, mặc định 47863)."
   },
   "optionsPort": {
     "message": "Cổng:"
@@ -21,12 +21,12 @@
     "message": "Đã lưu."
   },
   "optionsConnected": {
-    "message": "Đã kết nối với Keyboard Changer."
+    "message": "Đã kết nối với Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Có thứ khác đang phản hồi trên cổng này."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer chưa chạy hoặc đang dùng cổng khác."
+    "message": "Keyboard Switcher chưa chạy hoặc đang dùng cổng khác."
   }
 }

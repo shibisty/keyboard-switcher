@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Klavye düzenini web sitesine göre değiştirir. Yalnızca etkin sekmenin alan adını bu bilgisayardaki Keyboard Changer uygulamasına gönderir."
+    "message": "Klavye düzenini web sitesine göre değiştirir. Yalnızca etkin sekmenin alan adını bu bilgisayardaki Keyboard Switcher uygulamasına gönderir."
   },
   "optionsIntro": {
-    "message": "Keyboard Changer uygulamasının bağlantı noktası (uygulamadakiyle aynı, varsayılan 47863)."
+    "message": "Keyboard Switcher uygulamasının bağlantı noktası (uygulamadakiyle aynı, varsayılan 47863)."
   },
   "optionsPort": {
     "message": "Bağlantı noktası:"
@@ -21,12 +21,12 @@
     "message": "Kaydedildi."
   },
   "optionsConnected": {
-    "message": "Keyboard Changer’a bağlandı."
+    "message": "Keyboard Switcher’a bağlandı."
   },
   "optionsNotApp": {
     "message": "Bu bağlantı noktasında başka bir şey yanıt veriyor."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer çalışmıyor veya başka bir bağlantı noktası kullanıyor."
+    "message": "Keyboard Switcher çalışmıyor veya başka bir bağlantı noktası kullanıyor."
   }
 }

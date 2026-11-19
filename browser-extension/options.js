@@ -18,7 +18,7 @@ $('test').addEventListener('click', async () => {
   const port = Number($('port').value) || DEFAULT_PORT;
   try {
     const r = await fetch(`http://127.0.0.1:${port}/ping`);
-    const ok = r.ok && (await r.text()) === 'keyboard-changer';
+    const ok = r.ok && (await r.text()) === 'keyboard-switcher';
     $('status').textContent = api.i18n.getMessage(ok ? 'optionsConnected' : 'optionsNotApp');
   } catch {
     $('status').textContent = api.i18n.getMessage('optionsNotRunning');

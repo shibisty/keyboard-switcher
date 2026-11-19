@@ -97,7 +97,7 @@ void TrayApp::setLanguage(const QString &code)
 
     QCoreApplication::removeTranslator(&m_translator);
     if (m_language != QLatin1String("en")
-        && m_translator.load(QStringLiteral(":/i18n/keyboard_changer_%1.qm").arg(m_language)))
+        && m_translator.load(QStringLiteral(":/i18n/keyboard_switcher_%1.qm").arg(m_language)))
         QCoreApplication::installTranslator(&m_translator); // sends LanguageChange to widgets
     QGuiApplication::setLayoutDirection(Languages::isRtl(m_language) ? Qt::RightToLeft : Qt::LeftToRight);
     retranslate();
@@ -109,8 +109,8 @@ void TrayApp::retranslate()
     m_actPause->setText(tr("Pause"));
     m_actQuit->setText(tr("Exit"));
     m_tray.setToolTip(m_engine->isPaused()
-                          ? tr("Keyboard Changer — paused")
-                          : tr("Keyboard Changer — active rules: %1").arg(m_engine->activeRuleCount()));
+                          ? tr("Keyboard Switcher — paused")
+                          : tr("Keyboard Switcher — active rules: %1").arg(m_engine->activeRuleCount()));
 }
 
 void TrayApp::updateIcon()

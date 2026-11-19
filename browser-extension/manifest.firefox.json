@@ -10,6 +10,6 @@
   "background": { "scripts": ["background.js"] },
   "options_ui": { "page": "options.html", "open_in_tab": false },
   "browser_specific_settings": {
-    "gecko": { "id": "keyboard-changer@keyboardchanger.github.io", "strict_min_version": "115.0" }
+    "gecko": { "id": "keyboard-switcher@keyboardswitcher.github.io", "strict_min_version": "115.0" }
   }
 }

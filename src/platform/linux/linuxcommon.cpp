@@ -105,7 +105,7 @@ namespace {
 QString autostartFile()
 {
     return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)
-        + QStringLiteral("/autostart/io.github.KeyboardChanger.desktop");
+        + QStringLiteral("/autostart/io.github.KeyboardSwitcher.desktop");
 }
 } // namespace
 
@@ -130,9 +130,9 @@ AutostartResult setAutostart(bool enabled)
         return AutostartResult::Failed;
     f.write(QStringLiteral("[Desktop Entry]\n"
                            "Type=Application\n"
-                           "Name=Keyboard Changer\n"
+                           "Name=Keyboard Switcher\n"
                            "Exec=\"%1\" --autostart\n"
-                           "Icon=io.github.KeyboardChanger\n"
+                           "Icon=io.github.KeyboardSwitcher\n"
                            "X-GNOME-Autostart-enabled=true\n"
                            "X-KDE-autostart-after=panel\n")
                 .arg(exe)
@@ -201,7 +201,7 @@ QString UnsupportedBackend::problem() const
 
 PlatformBackend *PlatformBackend::create(QObject *parent)
 {
-    const QString forced = qEnvironmentVariable("KEYBOARD_CHANGER_BACKEND").toLower();
+    const QString forced = qEnvironmentVariable("KEYBOARD_SWITCHER_BACKEND").toLower();
     const QString desktop = qEnvironmentVariable("XDG_CURRENT_DESKTOP").toLower();
     const bool wayland = qEnvironmentVariable("XDG_SESSION_TYPE") == QLatin1String("wayland")
         || qEnvironmentVariableIsSet("WAYLAND_DISPLAY");

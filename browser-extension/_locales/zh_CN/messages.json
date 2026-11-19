@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "按网站切换键盘布局。仅将当前标签页的域名发送给此电脑上的 Keyboard Changer 应用。"
+    "message": "按网站切换键盘布局。仅将当前标签页的域名发送给此电脑上的 Keyboard Switcher 应用。"
   },
   "optionsIntro": {
-    "message": "Keyboard Changer 应用的端口（与应用中相同，默认 47863）。"
+    "message": "Keyboard Switcher 应用的端口（与应用中相同，默认 47863）。"
   },
   "optionsPort": {
     "message": "端口："
@@ -21,12 +21,12 @@
     "message": "已保存。"
   },
   "optionsConnected": {
-    "message": "已连接到 Keyboard Changer。"
+    "message": "已连接到 Keyboard Switcher。"
   },
   "optionsNotApp": {
     "message": "此端口上有其他程序在响应。"
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer 未运行，或使用了其他端口。"
+    "message": "Keyboard Switcher 未运行，或使用了其他端口。"
   }
 }

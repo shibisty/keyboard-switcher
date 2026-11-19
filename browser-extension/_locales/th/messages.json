@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "สลับเลย์เอาต์แป้นพิมพ์ตามเว็บไซต์ ส่งเฉพาะโดเมนของแท็บที่ใช้งานอยู่ไปยังแอป Keyboard Changer บนคอมพิวเตอร์เครื่องนี้"
+    "message": "สลับเลย์เอาต์แป้นพิมพ์ตามเว็บไซต์ ส่งเฉพาะโดเมนของแท็บที่ใช้งานอยู่ไปยังแอป Keyboard Switcher บนคอมพิวเตอร์เครื่องนี้"
   },
   "optionsIntro": {
-    "message": "พอร์ตของแอป Keyboard Changer (เหมือนในแอป ค่าเริ่มต้น 47863)"
+    "message": "พอร์ตของแอป Keyboard Switcher (เหมือนในแอป ค่าเริ่มต้น 47863)"
   },
   "optionsPort": {
     "message": "พอร์ต:"
@@ -21,12 +21,12 @@
     "message": "บันทึกแล้ว"
   },
   "optionsConnected": {
-    "message": "เชื่อมต่อกับ Keyboard Changer แล้ว"
+    "message": "เชื่อมต่อกับ Keyboard Switcher แล้ว"
   },
   "optionsNotApp": {
     "message": "มีสิ่งอื่นตอบกลับบนพอร์ตนี้"
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer ไม่ได้ทำงานอยู่หรือใช้พอร์ตอื่น"
+    "message": "Keyboard Switcher ไม่ได้ทำงานอยู่หรือใช้พอร์ตอื่น"
   }
 }

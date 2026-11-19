@@ -96,7 +96,7 @@ void BrowserBridge::onReadyRead(QTcpSocket *socket)
         return;
     }
     if (method == "GET" && path == "/ping") {
-        reply(socket, "200 OK", "keyboard-changer");
+        reply(socket, "200 OK", "keyboard-switcher");
         return;
     }
     if (method != "POST" || path != "/tab") {

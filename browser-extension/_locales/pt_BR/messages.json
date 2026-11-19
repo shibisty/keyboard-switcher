@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Alterna o layout do teclado por site. Envia apenas o domínio da aba ativa para o aplicativo Keyboard Changer neste computador."
+    "message": "Alterna o layout do teclado por site. Envia apenas o domínio da aba ativa para o aplicativo Keyboard Switcher neste computador."
   },
   "optionsIntro": {
-    "message": "Porta do aplicativo Keyboard Changer (a mesma do aplicativo, padrão 47863)."
+    "message": "Porta do aplicativo Keyboard Switcher (a mesma do aplicativo, padrão 47863)."
   },
   "optionsPort": {
     "message": "Porta:"
@@ -21,12 +21,12 @@
     "message": "Salvo."
   },
   "optionsConnected": {
-    "message": "Conectado ao Keyboard Changer."
+    "message": "Conectado ao Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Outra coisa responde nesta porta."
   },
   "optionsNotRunning": {
-    "message": "O Keyboard Changer não está em execução ou usa outra porta."
+    "message": "O Keyboard Switcher não está em execução ou usa outra porta."
   }
 }

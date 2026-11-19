@@ -14,7 +14,7 @@
 
 namespace {
 
-const QString kService = QStringLiteral("io.github.KeyboardChanger");
+const QString kService = QStringLiteral("io.github.KeyboardSwitcher");
 const QString kBridgePath = QStringLiteral("/Bridge");
 
 // KWin script: reports every window activation to DBusFocusBridge::focus().
@@ -22,7 +22,7 @@ const QString kBridgePath = QStringLiteral("/Bridge");
 const char kKWinScript[] = R"JS(
 function report(w) {
     if (!w) return;
-    callDBus("io.github.KeyboardChanger", "/Bridge", "io.github.KeyboardChanger", "focus",
+    callDBus("io.github.KeyboardSwitcher", "/Bridge", "io.github.KeyboardSwitcher", "focus",
              String(w.pid), String(w.resourceClass || ""), String(w.desktopFileName || w.resourceName || ""),
              String(w.caption || ""));
 }
@@ -31,12 +31,12 @@ else workspace.clientActivated.connect(report);
 report(workspace.activeWindow || workspace.activeClient);
 )JS";
 
-const QString kKWinScriptName = QStringLiteral("keyboardchanger");
+const QString kKWinScriptName = QStringLiteral("keyboardswitcher");
 
 // GNOME Shell extension object (gnome-extension/ in the source tree).
 const QString kShellService = QStringLiteral("org.gnome.Shell");
-const QString kShellPath = QStringLiteral("/io/github/KeyboardChanger");
-const QString kShellIface = QStringLiteral("io.github.KeyboardChanger.Shell");
+const QString kShellPath = QStringLiteral("/io/github/KeyboardSwitcher");
+const QString kShellIface = QStringLiteral("io.github.KeyboardSwitcher.Shell");
 
 } // namespace
 
@@ -214,7 +214,7 @@ bool GnomeBackend::probeExtension()
     const QString problem = reply.isValid()
         ? QString()
         : QCoreApplication::translate("Backend",
-                                      "Enable the \"Keyboard Changer\" GNOME Shell extension "
+                                      "Enable the \"Keyboard Switcher\" GNOME Shell extension "
                                       "(see gnome-extension/ in the project), then log out and back in.");
     if (problem != m_problem) {
         m_problem = problem;

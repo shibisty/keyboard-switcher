@@ -337,7 +337,7 @@ void SettingsWindow::refreshIcons()
 
 void SettingsWindow::retranslate()
 {
-    setWindowTitle(QStringLiteral("Keyboard Changer"));
+    setWindowTitle(QStringLiteral("Keyboard Switcher"));
     m_rulesTitle->setText(tr("Rules"));
     m_addButton->setToolTip(tr("Add rule"));
     m_presetButton->setToolTip(tr("Add preset"));
@@ -394,7 +394,7 @@ void SettingsWindow::updateBrowserStatus()
     if (!m_bridge->isListening()) {
         text = tr("Website rules are off: port %1 on 127.0.0.1 is busy.").arg(m_bridge->port());
     } else if (!m_engine->lastBrowserReport().isValid()) {
-        text = tr("To switch by website, install the Keyboard Changer extension in your browser "
+        text = tr("To switch by website, install the Keyboard Switcher extension in your browser "
                   "(Chrome, Edge, Brave, Opera, Vivaldi, Yandex, Firefox). It sends only the domain "
                   "of the active tab to this app on port %1.").arg(m_bridge->port());
     } else {
@@ -721,7 +721,7 @@ void SettingsWindow::onAutostartToggled(bool on)
     }
     switch (r) {
     case AutostartResult::DisabledByUser:
-        m_status->setText(tr("Start at login is turned off in the system settings. Allow Keyboard Changer there."));
+        m_status->setText(tr("Start at login is turned off in the system settings. Allow Keyboard Switcher there."));
         break;
     case AutostartResult::DisabledByPolicy:
         m_status->setText(tr("Start at login is disabled by your administrator."));

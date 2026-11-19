@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Αλλάζει τη διάταξη πληκτρολογίου ανά ιστότοπο. Στέλνει μόνο τον τομέα της ενεργής καρτέλας στην εφαρμογή Keyboard Changer σε αυτόν τον υπολογιστή."
+    "message": "Αλλάζει τη διάταξη πληκτρολογίου ανά ιστότοπο. Στέλνει μόνο τον τομέα της ενεργής καρτέλας στην εφαρμογή Keyboard Switcher σε αυτόν τον υπολογιστή."
   },
   "optionsIntro": {
-    "message": "Θύρα της εφαρμογής Keyboard Changer (ίδια με την εφαρμογή, προεπιλογή 47863)."
+    "message": "Θύρα της εφαρμογής Keyboard Switcher (ίδια με την εφαρμογή, προεπιλογή 47863)."
   },
   "optionsPort": {
     "message": "Θύρα:"
@@ -21,12 +21,12 @@
     "message": "Αποθηκεύτηκε."
   },
   "optionsConnected": {
-    "message": "Συνδέθηκε στο Keyboard Changer."
+    "message": "Συνδέθηκε στο Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Σε αυτή τη θύρα απαντά κάτι άλλο."
   },
   "optionsNotRunning": {
-    "message": "Το Keyboard Changer δεν εκτελείται ή χρησιμοποιεί άλλη θύρα."
+    "message": "Το Keyboard Switcher δεν εκτελείται ή χρησιμοποιεί άλλη θύρα."
   }
 }

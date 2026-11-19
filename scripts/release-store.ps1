@@ -48,7 +48,7 @@ if ('arm64' -in $Arch -and (-not $cfg.qtArm64 -or ([string]$cfg.qtArm64).Contain
     Fail "store.config.json: fill in 'qtArm64' (or build only x64: -Arch x64)"
 }
 if ($cfg.publisher -notmatch '^CN=') { Fail "publisher must start with 'CN=' (Package/Identity/Publisher in Partner Center)" }
-if ($cfg.identityName -eq 'KeyboardChanger.Dev') { Fail 'identityName still has the development value' }
+if ($cfg.identityName -eq 'KeyboardSwitcher.Dev') { Fail 'identityName still has the development value' }
 
 if ($Version -notmatch '^(\d+)\.(\d+)\.(\d+)\.(\d+)$') { Fail "Version must have 4 numbers, e.g. 1.2.0.0 (got '$Version')" }
 if ([int]$Matches[4] -ne 0) { Fail 'The Store reserves the 4th version number: it must be 0 (e.g. 1.2.3.0)' }
@@ -95,7 +95,7 @@ foreach ($a in $Arch) {
     # --- 3. Verify ---------------------------------------------------------------
     Step "Verifying $a"
     $buildDir = Join-Path $Root "build\release-$a"
-    $msix = Join-Path $msixDir "KeyboardChanger_${Version}_$a.msix"
+    $msix = Join-Path $msixDir "KeyboardSwitcher_${Version}_$a.msix"
     if (-not (Test-Path $msix)) { Fail "Package not produced: $msix" }
 
     $zip = [IO.Compression.ZipFile]::OpenRead($msix)
@@ -113,15 +113,15 @@ foreach ($a in $Arch) {
     if ($id.ProcessorArchitecture -ne $a) { Fail "Manifest architecture '$($id.ProcessorArchitecture)' != $a" }
     if ($debugDlls.Count) { Fail "Debug Qt DLLs inside the package: $($debugDlls.Name -join ', ')" }
 
-    $exe = Join-Path $buildDir 'package\KeyboardChanger.exe'
+    $exe = Join-Path $buildDir 'package\KeyboardSwitcher.exe'
     $exeVersion = (Get-Item $exe).VersionInfo.FileVersion
-    if ($exeVersion -ne $Version) { Fail "KeyboardChanger.exe version '$exeVersion' != $Version" }
+    if ($exeVersion -ne $Version) { Fail "KeyboardSwitcher.exe version '$exeVersion' != $Version" }
     Write-Host "OK: manifest, exe version $exeVersion, release DLLs"
 
     # Symbols for Store crash analytics (.appxsym = zip with the PDB)
-    $pdb = Join-Path $buildDir 'KeyboardChanger.pdb'
+    $pdb = Join-Path $buildDir 'KeyboardSwitcher.pdb'
     if (Test-Path $pdb) {
-        $symZip = Join-Path $symDir "KeyboardChanger_${Version}_$a.zip"
+        $symZip = Join-Path $symDir "KeyboardSwitcher_${Version}_$a.zip"
         Compress-Archive -Path $pdb -DestinationPath $symZip -Force
         Move-Item $symZip ([IO.Path]::ChangeExtension($symZip, '.appxsym')) -Force
     } else {
@@ -133,12 +133,12 @@ foreach ($a in $Arch) {
 Step 'Creating .msixbundle'
 & $shell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'bundle.ps1') -Version $Version -DistDir $msixDir
 if ($LASTEXITCODE) { Fail 'Bundling failed' }
-$bundle = Join-Path $outDir "KeyboardChanger_$Version.msixbundle"
-Move-Item (Join-Path $msixDir "KeyboardChanger_$Version.msixbundle") $bundle -Force
+$bundle = Join-Path $outDir "KeyboardSwitcher_$Version.msixbundle"
+Move-Item (Join-Path $msixDir "KeyboardSwitcher_$Version.msixbundle") $bundle -Force
 
 Step 'Creating .msixupload'
 $archTag = ($Arch | Sort-Object) -join '_'
-$uploadZip = Join-Path $outDir "KeyboardChanger_${Version}_$archTag.zip"
+$uploadZip = Join-Path $outDir "KeyboardSwitcher_${Version}_$archTag.zip"
 $items = @($bundle) + @(Get-ChildItem $symDir -Filter '*.appxsym' | ForEach-Object FullName)
 Compress-Archive -Path $items -DestinationPath $uploadZip -Force
 $upload = [IO.Path]::ChangeExtension($uploadZip, '.msixupload')
@@ -151,7 +151,7 @@ Write-Host "  $upload" -ForegroundColor Green
 Write-Host @"
 
 Next steps in Partner Center (partner.microsoft.com/dashboard):
-  1. Apps and games -> Keyboard Changer -> Start update (or Start submission).
+  1. Apps and games -> Keyboard Switcher -> Start update (or Start submission).
   2. Packages -> drag the .msixupload file in, wait for validation.
   3. Device families: Windows 10/11 Desktop.
   4. Restricted capability 'runFullTrust': explain it, e.g.

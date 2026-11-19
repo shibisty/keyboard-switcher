@@ -4,7 +4,7 @@
 #>
 param(
     [string] $Version = '1.0.0.0',
-    # Folder with KeyboardChanger_<Version>_<arch>.msix files
+    # Folder with KeyboardSwitcher_<Version>_<arch>.msix files
     [string] $DistDir,
     [string] $CertPfx,
     [string] $CertPassword
@@ -21,11 +21,11 @@ $signtool = Join-Path $kitBin.FullName 'x64\signtool.exe'
 
 if (Test-Path $BundleIn) { Remove-Item -Recurse -Force $BundleIn }
 New-Item -ItemType Directory $BundleIn | Out-Null
-$parts = Get-ChildItem $Dist -Filter "KeyboardChanger_${Version}_*.msix"
-if (-not $parts) { throw "No KeyboardChanger_${Version}_*.msix in $Dist" }
+$parts = Get-ChildItem $Dist -Filter "KeyboardSwitcher_${Version}_*.msix"
+if (-not $parts) { throw "No KeyboardSwitcher_${Version}_*.msix in $Dist" }
 $parts | Copy-Item -Destination $BundleIn
 
-$bundle = Join-Path $Dist "KeyboardChanger_$Version.msixbundle"
+$bundle = Join-Path $Dist "KeyboardSwitcher_$Version.msixbundle"
 & $makeappx bundle /d $BundleIn /p $bundle /bv $Version /o
 if ($LASTEXITCODE) { throw 'makeappx bundle failed' }
 

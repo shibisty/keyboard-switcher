@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Перемикає розкладку клавіатури за сайтом. Передає застосунку Keyboard Changer на цьому комп’ютері лише домен активної вкладки."
+    "message": "Перемикає розкладку клавіатури за сайтом. Передає застосунку Keyboard Switcher на цьому комп’ютері лише домен активної вкладки."
   },
   "optionsIntro": {
-    "message": "Порт застосунку Keyboard Changer (як у застосунку, типово 47863)."
+    "message": "Порт застосунку Keyboard Switcher (як у застосунку, типово 47863)."
   },
   "optionsPort": {
     "message": "Порт:"
@@ -21,12 +21,12 @@
     "message": "Збережено."
   },
   "optionsConnected": {
-    "message": "Підключено до Keyboard Changer."
+    "message": "Підключено до Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "На цьому порту відповідає щось інше."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer не запущено або він використовує інший порт."
+    "message": "Keyboard Switcher не запущено або він використовує інший порт."
   }
 }

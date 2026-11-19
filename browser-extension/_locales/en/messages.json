@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Switches the keyboard layout by website. Sends only the active tab's domain to the Keyboard Changer app on this computer."
+    "message": "Switches the keyboard layout by website. Sends only the active tab's domain to the Keyboard Switcher app on this computer."
   },
   "optionsIntro": {
-    "message": "Port of the Keyboard Changer app (same as in the app, default 47863)."
+    "message": "Port of the Keyboard Switcher app (same as in the app, default 47863)."
   },
   "optionsPort": {
     "message": "Port:"
@@ -21,12 +21,12 @@
     "message": "Saved."
   },
   "optionsConnected": {
-    "message": "Connected to Keyboard Changer."
+    "message": "Connected to Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Something else answers on this port."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer is not running or uses another port."
+    "message": "Keyboard Switcher is not running or uses another port."
   }
 }

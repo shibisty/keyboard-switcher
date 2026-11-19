@@ -18,7 +18,7 @@
     ProcessorArchitecture="@ARCH@" />
 
   <Properties>
-    <DisplayName>Keyboard Changer</DisplayName>
+    <DisplayName>Keyboard Switcher</DisplayName>
     <PublisherDisplayName>@PUBLISHER_DISPLAY_NAME@</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -90,9 +90,9 @@
   </Resources>
 
   <Applications>
-    <Application Id="KeyboardChanger" Executable="KeyboardChanger.exe" EntryPoint="Windows.FullTrustApplication">
+    <Application Id="KeyboardSwitcher" Executable="KeyboardSwitcher.exe" EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements
-        DisplayName="Keyboard Changer"
+        DisplayName="Keyboard Switcher"
         Description="Switches the keyboard layout automatically for selected applications."
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
@@ -102,8 +102,8 @@
 
       <Extensions>
         <!-- TaskId must match kTaskId in src/autostart_winrt.cpp -->
-        <desktop:Extension Category="windows.startupTask" Executable="KeyboardChanger.exe" EntryPoint="Windows.FullTrustApplication">
-          <desktop:StartupTask TaskId="KeyboardChangerStartup" Enabled="false" DisplayName="Keyboard Changer" />
+        <desktop:Extension Category="windows.startupTask" Executable="KeyboardSwitcher.exe" EntryPoint="Windows.FullTrustApplication">
+          <desktop:StartupTask TaskId="KeyboardSwitcherStartup" Enabled="false" DisplayName="Keyboard Switcher" />
         </desktop:Extension>
       </Extensions>
     </Application>

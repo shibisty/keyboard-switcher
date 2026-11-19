@@ -57,7 +57,7 @@ TISInputSourceRef findSource(NSArray *sources, const QString &sourceId)
 
 QString launchAgentPath()
 {
-    return QDir::homePath() + QStringLiteral("/Library/LaunchAgents/io.github.keyboardchanger.plist");
+    return QDir::homePath() + QStringLiteral("/Library/LaunchAgents/io.github.keyboardswitcher.plist");
 }
 
 } // namespace
@@ -185,7 +185,7 @@ AutostartResult MacBackend::setAutostart(bool enabled)
                 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
                 "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n"
                 "<plist version=\"1.0\"><dict>\n"
-                "  <key>Label</key><string>io.github.keyboardchanger</string>\n"
+                "  <key>Label</key><string>io.github.keyboardswitcher</string>\n"
                 "  <key>ProgramArguments</key><array><string>%1</string><string>--autostart</string></array>\n"
                 "  <key>RunAtLoad</key><true/>\n"
                 "</dict></plist>\n").arg(exe).toUtf8());

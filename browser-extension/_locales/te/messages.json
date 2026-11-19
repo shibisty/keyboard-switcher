@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "వెబ్‌సైట్ ప్రకారం కీబోర్డ్ లేఅవుట్‌ను మారుస్తుంది. ఈ కంప్యూటర్‌లోని Keyboard Changer యాప్‌కు యాక్టివ్ ట్యాబ్ డొమైన్‌ను మాత్రమే పంపుతుంది."
+    "message": "వెబ్‌సైట్ ప్రకారం కీబోర్డ్ లేఅవుట్‌ను మారుస్తుంది. ఈ కంప్యూటర్‌లోని Keyboard Switcher యాప్‌కు యాక్టివ్ ట్యాబ్ డొమైన్‌ను మాత్రమే పంపుతుంది."
   },
   "optionsIntro": {
-    "message": "Keyboard Changer యాప్ పోర్ట్ (యాప్‌లో ఉన్నదే, డిఫాల్ట్ 47863)."
+    "message": "Keyboard Switcher యాప్ పోర్ట్ (యాప్‌లో ఉన్నదే, డిఫాల్ట్ 47863)."
   },
   "optionsPort": {
     "message": "పోర్ట్:"
@@ -21,12 +21,12 @@
     "message": "సేవ్ చేయబడింది."
   },
   "optionsConnected": {
-    "message": "Keyboard Changerకు కనెక్ట్ అయింది."
+    "message": "Keyboard Switcherకు కనెక్ట్ అయింది."
   },
   "optionsNotApp": {
     "message": "ఈ పోర్ట్‌లో వేరే ఏదో స్పందిస్తోంది."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer అమలులో లేదు లేదా వేరే పోర్ట్‌ను ఉపయోగిస్తోంది."
+    "message": "Keyboard Switcher అమలులో లేదు లేదా వేరే పోర్ట్‌ను ఉపయోగిస్తోంది."
   }
 }

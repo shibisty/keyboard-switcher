@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Webhely szerint vált billentyűzetkiosztást. Csak az aktív lap domainjét küldi el a számítógépen futó Keyboard Changer alkalmazásnak."
+    "message": "Webhely szerint vált billentyűzetkiosztást. Csak az aktív lap domainjét küldi el a számítógépen futó Keyboard Switcher alkalmazásnak."
   },
   "optionsIntro": {
-    "message": "A Keyboard Changer alkalmazás portja (ugyanaz, mint az alkalmazásban, alapértelmezés: 47863)."
+    "message": "A Keyboard Switcher alkalmazás portja (ugyanaz, mint az alkalmazásban, alapértelmezés: 47863)."
   },
   "optionsPort": {
     "message": "Port:"
@@ -21,12 +21,12 @@
     "message": "Mentve."
   },
   "optionsConnected": {
-    "message": "Csatlakozva a Keyboard Changerhez."
+    "message": "Csatlakozva a Keyboard Switcherhez."
   },
   "optionsNotApp": {
     "message": "Ezen a porton valami más válaszol."
   },
   "optionsNotRunning": {
-    "message": "A Keyboard Changer nem fut, vagy másik portot használ."
+    "message": "A Keyboard Switcher nem fut, vagy másik portot használ."
   }
 }

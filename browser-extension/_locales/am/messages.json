@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "የቁልፍ ሰሌዳ አቀማመጥን በድር ጣቢያ ይቀይራል። በዚህ ኮምፒውተር ላይ ለሚገኘው የKeyboard Changer መተግበሪያ የንቁ ትር ጎራን ብቻ ይልካል።"
+    "message": "የቁልፍ ሰሌዳ አቀማመጥን በድር ጣቢያ ይቀይራል። በዚህ ኮምፒውተር ላይ ለሚገኘው የKeyboard Switcher መተግበሪያ የንቁ ትር ጎራን ብቻ ይልካል።"
   },
   "optionsIntro": {
-    "message": "የKeyboard Changer መተግበሪያ ወደብ (በመተግበሪያው ውስጥ እንዳለው፣ ነባሪ 47863)።"
+    "message": "የKeyboard Switcher መተግበሪያ ወደብ (በመተግበሪያው ውስጥ እንዳለው፣ ነባሪ 47863)።"
   },
   "optionsPort": {
     "message": "ወደብ፦"
@@ -21,12 +21,12 @@
     "message": "ተቀምጧል።"
   },
   "optionsConnected": {
-    "message": "ከKeyboard Changer ጋር ተገናኝቷል።"
+    "message": "ከKeyboard Switcher ጋር ተገናኝቷል።"
   },
   "optionsNotApp": {
     "message": "በዚህ ወደብ ላይ ሌላ ነገር እየመለሰ ነው።"
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer እየሰራ አይደለም ወይም ሌላ ወደብ ይጠቀማል።"
+    "message": "Keyboard Switcher እየሰራ አይደለም ወይም ሌላ ወደብ ይጠቀማል።"
   }
 }

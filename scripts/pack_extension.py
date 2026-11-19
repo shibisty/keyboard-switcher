@@ -1,6 +1,6 @@
 """Packs browser-extension/ into store-ready zips:
-   dist/extension/keyboard-changer-chromium.zip  (Chrome Web Store, Edge Add-ons, Opera, also for Brave/Vivaldi/Yandex)
-   dist/extension/keyboard-changer-firefox.zip   (addons.mozilla.org)
+   dist/extension/keyboard-switcher-chromium.zip  (Chrome Web Store, Edge Add-ons, Opera, also for Brave/Vivaldi/Yandex)
+   dist/extension/keyboard-switcher-firefox.zip   (addons.mozilla.org)
 Usage: python scripts/pack_extension.py
 """
 import json
@@ -15,7 +15,7 @@ COMMON = ["background.js", "options.html", "options.js"]
 
 def pack(name: str, manifest: str) -> Path:
     OUT.mkdir(parents=True, exist_ok=True)
-    target = OUT / f"keyboard-changer-{name}.zip"
+    target = OUT / f"keyboard-switcher-{name}.zip"
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("manifest.json", (SRC / manifest).read_text(encoding="utf-8"))
         for f in COMMON:

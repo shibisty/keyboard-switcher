@@ -16,7 +16,7 @@ using namespace winrt::Windows::ApplicationModel;
 
 namespace {
 
-constexpr wchar_t kTaskId[] = L"KeyboardChangerStartup"; // must match AppxManifest.xml
+constexpr wchar_t kTaskId[] = L"KeyboardSwitcherStartup"; // must match AppxManifest.xml
 
 int toCode(StartupTaskState s)
 {

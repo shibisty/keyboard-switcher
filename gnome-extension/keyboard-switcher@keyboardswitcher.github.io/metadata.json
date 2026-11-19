@@ -1,0 +1,15 @@
+{
+  "uuid": "keyboard-switcher@keyboardswitcher.github.io",
+  "name": "Keyboard Switcher helper",
+  "description": "Lets the Keyboard Switcher app see which window is focused and switch input sources. Needed on GNOME (Wayland and X11).",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
+  "version-name": "1.1"
+}

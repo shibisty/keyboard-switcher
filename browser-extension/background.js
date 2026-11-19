@@ -1,5 +1,5 @@
-// Keyboard Changer browser extension.
-// Sends ONLY the domain of the active tab ("github.com") to the Keyboard Changer app
+// Keyboard Switcher browser extension.
+// Sends ONLY the domain of the active tab ("github.com") to the Keyboard Switcher app
 // running on this computer (http://127.0.0.1:<port>/tab). Nothing leaves the machine.
 const api = globalThis.browser ?? globalThis.chrome;
 const DEFAULT_PORT = 47863;

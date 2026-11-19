@@ -4,7 +4,7 @@
   strings/_source.json   the 60 English source strings (order is fixed)
   strings/<code>.json    translations, same order
   languages.json         code / autonym / rtl / chrome-extension locale
-Outputs: i18n/keyboard_changer_<code>.ts, src/core/languages_gen.h,
+Outputs: i18n/keyboard_switcher_<code>.ts, src/core/languages_gen.h,
 browser-extension/_locales/*, .desktop Comment[..] lines, MSIX <Resource> list.
 Languages in ALIASES have no own translation and reuse a close language.
 """
@@ -35,9 +35,9 @@ def ts(code, t):
         out.append("</context>")
     out.append("</TS>\n")
     return "\n".join(out)
-for old in I18N.glob("keyboard_changer_*.ts"): old.unlink()
+for old in I18N.glob("keyboard_switcher_*.ts"): old.unlink()
 for c, t in tr.items():
-    (I18N / f"keyboard_changer_{c}.ts").write_text(ts(c, t), encoding="utf8")
+    (I18N / f"keyboard_switcher_{c}.ts").write_text(ts(c, t), encoding="utf8")
 
 # C++ table
 def cstr(x):  # octal-escaped UTF-8: independent of compiler source charset and C++20 char8_t
@@ -62,13 +62,13 @@ for l in real:
     ch = l["chrome"]
     if not ch: continue
     t = src if l["code"] == "en" else tr[l["code"]]
-    m = {"name": {"message": "Keyboard Changer"}}
+    m = {"name": {"message": "Keyboard Switcher"}}
     for k, i in extmap.items(): m[k] = {"message": t[i]}
     d = loc / ch; d.mkdir(parents=True)
     (d / "messages.json").write_text(json.dumps(m, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
 
 # .desktop
-p = ROOT / "packaging/linux/io.github.KeyboardChanger.desktop"
+p = ROOT / "packaging/linux/io.github.KeyboardSwitcher.desktop"
 lines = [x for x in p.read_text(encoding="utf8").splitlines() if not x.startswith(("Comment[", "Name["))]
 out = []
 for x in lines:

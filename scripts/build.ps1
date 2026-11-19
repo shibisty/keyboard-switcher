@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Release build + MSIX package of Keyboard Changer for x64 (AMD64) or ARM64.
+  Release build + MSIX package of Keyboard Switcher for x64 (AMD64) or ARM64.
 
 .EXAMPLE
   # AMD64
@@ -22,9 +22,9 @@ param(
     [string] $QtHostDir,
     [string] $Version = '1.0.0.0',
     # Values from Partner Center (Product identity) for the Store build:
-    [string] $IdentityName = 'KeyboardChanger.Dev',
-    [string] $Publisher = 'CN=KeyboardChangerDev',
-    [string] $PublisherDisplayName = 'Keyboard Changer',
+    [string] $IdentityName = 'KeyboardSwitcher.Dev',
+    [string] $Publisher = 'CN=KeyboardSwitcherDev',
+    [string] $PublisherDisplayName = 'Keyboard Switcher',
     # Optional: sign for sideloading (the Store re-signs packages itself)
     [string] $CertPfx,
     [string] $CertPassword,
@@ -74,11 +74,11 @@ if ($LASTEXITCODE) { throw 'build failed' }
 # --- 3. Deploy Qt runtime -----------------------------------------------------
 if (Test-Path $StageDir) { Remove-Item -Recurse -Force $StageDir }
 New-Item -ItemType Directory -Force $StageDir | Out-Null
-Copy-Item (Join-Path $BuildDir 'KeyboardChanger.exe') $StageDir
+Copy-Item (Join-Path $BuildDir 'KeyboardSwitcher.exe') $StageDir
 
 $deployTool = if ($QtHostDir) { "$QtHostDir\bin\windeployqt.exe" } else { "$QtDir\bin\windeployqt.exe" }
 $deployArgs = @('--release', '--no-translations', '--no-system-d3d-compiler', '--no-opengl-sw',
-                '--no-compiler-runtime', (Join-Path $StageDir 'KeyboardChanger.exe'))
+                '--no-compiler-runtime', (Join-Path $StageDir 'KeyboardSwitcher.exe'))
 if ($QtHostDir) {
     $qtpaths = if (Test-Path "$QtDir\bin\qtpaths.bat") { "$QtDir\bin\qtpaths.bat" } else { "$QtDir\bin\qtpaths.exe" }
     $deployArgs = @('--qtpaths', $qtpaths) + $deployArgs
@@ -105,7 +105,7 @@ $makeappx = Join-Path $kitBin.FullName 'x64\makeappx.exe'
 $signtool = Join-Path $kitBin.FullName 'x64\signtool.exe'
 
 New-Item -ItemType Directory -Force $OutDir | Out-Null
-$msix = Join-Path $OutDir "KeyboardChanger_${Version}_$Arch.msix"
+$msix = Join-Path $OutDir "KeyboardSwitcher_${Version}_$Arch.msix"
 Write-Host '==> makeappx pack'
 & $makeappx pack /d $StageDir /p $msix /o
 if ($LASTEXITCODE) { throw 'makeappx failed' }

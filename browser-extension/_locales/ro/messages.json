@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Comută aranjamentul tastaturii în funcție de site. Trimite doar domeniul filei active către aplicația Keyboard Changer de pe acest computer."
+    "message": "Comută aranjamentul tastaturii în funcție de site. Trimite doar domeniul filei active către aplicația Keyboard Switcher de pe acest computer."
   },
   "optionsIntro": {
-    "message": "Portul aplicației Keyboard Changer (la fel ca în aplicație, implicit 47863)."
+    "message": "Portul aplicației Keyboard Switcher (la fel ca în aplicație, implicit 47863)."
   },
   "optionsPort": {
     "message": "Port:"
@@ -21,12 +21,12 @@
     "message": "Salvat."
   },
   "optionsConnected": {
-    "message": "Conectat la Keyboard Changer."
+    "message": "Conectat la Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Pe acest port răspunde altceva."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer nu rulează sau folosește alt port."
+    "message": "Keyboard Switcher nu rulează sau folosește alt port."
   }
 }

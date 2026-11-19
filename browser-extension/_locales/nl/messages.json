@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Schakelt de toetsenbordindeling per website om. Stuurt alleen het domein van het actieve tabblad naar de Keyboard Changer-app op deze computer."
+    "message": "Schakelt de toetsenbordindeling per website om. Stuurt alleen het domein van het actieve tabblad naar de Keyboard Switcher-app op deze computer."
   },
   "optionsIntro": {
-    "message": "Poort van de Keyboard Changer-app (hetzelfde als in de app, standaard 47863)."
+    "message": "Poort van de Keyboard Switcher-app (hetzelfde als in de app, standaard 47863)."
   },
   "optionsPort": {
     "message": "Poort:"
@@ -21,12 +21,12 @@
     "message": "Opgeslagen."
   },
   "optionsConnected": {
-    "message": "Verbonden met Keyboard Changer."
+    "message": "Verbonden met Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "Op deze poort antwoordt iets anders."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer draait niet of gebruikt een andere poort."
+    "message": "Keyboard Switcher draait niet of gebruikt een andere poort."
   }
 }

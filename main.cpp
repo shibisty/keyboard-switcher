@@ -14,7 +14,7 @@ QString instanceName()
 {
     // Per user: several users can run their own copy on one machine.
     const QString user = qEnvironmentVariable("USER", qEnvironmentVariable("USERNAME"));
-    return QStringLiteral("KeyboardChanger-") + user;
+    return QStringLiteral("KeyboardSwitcher-") + user;
 }
 
 // Asks a running copy to show its settings. True if one answered.
@@ -44,11 +44,11 @@ int main(int argc, char *argv[])
 #endif
     QApplication app(argc, argv);
     QApplication::setQuitOnLastWindowClosed(false);
-    QCoreApplication::setOrganizationName(QStringLiteral("KeyboardChanger"));
-    QCoreApplication::setApplicationName(QStringLiteral("KeyboardChanger"));
+    QCoreApplication::setOrganizationName(QStringLiteral("KeyboardSwitcher"));
+    QCoreApplication::setApplicationName(QStringLiteral("KeyboardSwitcher"));
     QCoreApplication::setApplicationVersion(QStringLiteral(KC_VERSION_STR));
-    QGuiApplication::setDesktopFileName(QStringLiteral("io.github.KeyboardChanger"));
-    // Windows: %APPDATA%\KeyboardChanger\KeyboardChanger.ini; macOS / Linux: ~/.config/KeyboardChanger/
+    QGuiApplication::setDesktopFileName(QStringLiteral("io.github.KeyboardSwitcher"));
+    // Windows: %APPDATA%\KeyboardSwitcher\KeyboardSwitcher.ini; macOS / Linux: ~/.config/KeyboardSwitcher/
     QSettings::setDefaultFormat(QSettings::IniFormat);
     qRegisterMetaType<FocusInfo>();
 

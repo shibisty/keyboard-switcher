@@ -1,5 +1,5 @@
 {
-  "identityName": "<Package/Identity/Name, e.g. 12345YourName.KeyboardChanger>",
+  "identityName": "<Package/Identity/Name, e.g. 12345YourName.KeyboardSwitcher>",
   "publisher": "<Package/Identity/Publisher, e.g. CN=1A2B3C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D>",
   "publisherDisplayName": "<Package/Properties/PublisherDisplayName, e.g. Your Name>",
   "qtX64": "C:\\Qt\\6.11.1\\msvc2022_64",

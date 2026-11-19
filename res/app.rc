@@ -16,11 +16,11 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "FileDescription",  "Keyboard Changer - per-app keyboard layout switcher"
+            VALUE "FileDescription",  "Keyboard Switcher - per-app keyboard layout switcher"
             VALUE "FileVersion",      KC_VERSION_STR
-            VALUE "InternalName",     "KeyboardChanger"
-            VALUE "OriginalFilename", "KeyboardChanger.exe"
-            VALUE "ProductName",      "Keyboard Changer"
+            VALUE "InternalName",     "KeyboardSwitcher"
+            VALUE "OriginalFilename", "KeyboardSwitcher.exe"
+            VALUE "ProductName",      "Keyboard Switcher"
             VALUE "ProductVersion",   KC_VERSION_STR
         END
     END

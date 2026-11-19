@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "依網站切換鍵盤配置。僅將目前分頁的網域傳送給此電腦上的 Keyboard Changer 應用程式。"
+    "message": "依網站切換鍵盤配置。僅將目前分頁的網域傳送給此電腦上的 Keyboard Switcher 應用程式。"
   },
   "optionsIntro": {
-    "message": "Keyboard Changer 應用程式的連接埠（與應用程式中相同，預設 47863）。"
+    "message": "Keyboard Switcher 應用程式的連接埠（與應用程式中相同，預設 47863）。"
   },
   "optionsPort": {
     "message": "連接埠："
@@ -21,12 +21,12 @@
     "message": "已儲存。"
   },
   "optionsConnected": {
-    "message": "已連線至 Keyboard Changer。"
+    "message": "已連線至 Keyboard Switcher。"
   },
   "optionsNotApp": {
     "message": "此連接埠上有其他程式回應。"
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer 未執行，或使用了其他連接埠。"
+    "message": "Keyboard Switcher 未執行，或使用了其他連接埠。"
   }
 }

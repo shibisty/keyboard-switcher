@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Переключает раскладку клавиатуры по сайту. Передаёт приложению Keyboard Changer на этом компьютере только домен активной вкладки."
+    "message": "Переключает раскладку клавиатуры по сайту. Передаёт приложению Keyboard Switcher на этом компьютере только домен активной вкладки."
   },
   "optionsIntro": {
-    "message": "Порт приложения Keyboard Changer (как в приложении, по умолчанию 47863)."
+    "message": "Порт приложения Keyboard Switcher (как в приложении, по умолчанию 47863)."
   },
   "optionsPort": {
     "message": "Порт:"
@@ -21,12 +21,12 @@
     "message": "Сохранено."
   },
   "optionsConnected": {
-    "message": "Подключено к Keyboard Changer."
+    "message": "Подключено к Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "На этом порту отвечает что-то другое."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer не запущен или использует другой порт."
+    "message": "Keyboard Switcher не запущен или использует другой порт."
   }
 }

@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "ওয়েবসাইট অনুযায়ী কীবোর্ড লেআউট বদলায়। এই কম্পিউটারের Keyboard Changer অ্যাপে শুধু সক্রিয় ট্যাবের ডোমেন পাঠায়।"
+    "message": "ওয়েবসাইট অনুযায়ী কীবোর্ড লেআউট বদলায়। এই কম্পিউটারের Keyboard Switcher অ্যাপে শুধু সক্রিয় ট্যাবের ডোমেন পাঠায়।"
   },
   "optionsIntro": {
-    "message": "Keyboard Changer অ্যাপের পোর্ট (অ্যাপের মতোই, ডিফল্ট 47863)।"
+    "message": "Keyboard Switcher অ্যাপের পোর্ট (অ্যাপের মতোই, ডিফল্ট 47863)।"
   },
   "optionsPort": {
     "message": "পোর্ট:"
@@ -21,12 +21,12 @@
     "message": "সংরক্ষিত হয়েছে।"
   },
   "optionsConnected": {
-    "message": "Keyboard Changer-এর সাথে সংযুক্ত।"
+    "message": "Keyboard Switcher-এর সাথে সংযুক্ত।"
   },
   "optionsNotApp": {
     "message": "এই পোর্টে অন্য কিছু সাড়া দিচ্ছে।"
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer চলছে না বা অন্য পোর্ট ব্যবহার করছে।"
+    "message": "Keyboard Switcher চলছে না বা অন্য পোর্ট ব্যবহার করছে।"
   }
 }

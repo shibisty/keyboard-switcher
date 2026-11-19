@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Schaltet die Tastaturbelegung nach Website um. Sendet nur die Domain des aktiven Tabs an die Keyboard-Changer-App auf diesem Computer."
+    "message": "Schaltet die Tastaturbelegung nach Website um. Sendet nur die Domain des aktiven Tabs an die Keyboard-Switcher-App auf diesem Computer."
   },
   "optionsIntro": {
-    "message": "Port der Keyboard-Changer-App (wie in der App, Standard 47863)."
+    "message": "Port der Keyboard-Switcher-App (wie in der App, Standard 47863)."
   },
   "optionsPort": {
     "message": "Port:"
@@ -21,12 +21,12 @@
     "message": "Gespeichert."
   },
   "optionsConnected": {
-    "message": "Mit Keyboard Changer verbunden."
+    "message": "Mit Keyboard Switcher verbunden."
   },
   "optionsNotApp": {
     "message": "Auf diesem Port antwortet etwas anderes."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer läuft nicht oder verwendet einen anderen Port."
+    "message": "Keyboard Switcher läuft nicht oder verwendet einen anderen Port."
   }
 }

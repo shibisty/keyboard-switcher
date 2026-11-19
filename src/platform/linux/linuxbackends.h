@@ -79,7 +79,7 @@ private:
 class DBusFocusBridge : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "io.github.KeyboardChanger")
+    Q_CLASSINFO("D-Bus Interface", "io.github.KeyboardSwitcher")
 public:
     using QObject::QObject;
     bool registerOnBus();

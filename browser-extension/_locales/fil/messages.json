@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "Nagpapalit ng keyboard layout ayon sa website. Domain lang ng aktibong tab ang ipinapadala sa Keyboard Changer app sa computer na ito."
+    "message": "Nagpapalit ng keyboard layout ayon sa website. Domain lang ng aktibong tab ang ipinapadala sa Keyboard Switcher app sa computer na ito."
   },
   "optionsIntro": {
-    "message": "Port ng Keyboard Changer app (kapareho ng nasa app, default 47863)."
+    "message": "Port ng Keyboard Switcher app (kapareho ng nasa app, default 47863)."
   },
   "optionsPort": {
     "message": "Port:"
@@ -21,12 +21,12 @@
     "message": "Na-save."
   },
   "optionsConnected": {
-    "message": "Nakakonekta sa Keyboard Changer."
+    "message": "Nakakonekta sa Keyboard Switcher."
   },
   "optionsNotApp": {
     "message": "May ibang sumasagot sa port na ito."
   },
   "optionsNotRunning": {
-    "message": "Hindi tumatakbo ang Keyboard Changer o ibang port ang gamit."
+    "message": "Hindi tumatakbo ang Keyboard Switcher o ibang port ang gamit."
   }
 }

@@ -1,12 +1,12 @@
 {
   "name": {
-    "message": "Keyboard Changer"
+    "message": "Keyboard Switcher"
   },
   "description": {
-    "message": "वेबसाइटनुसार कीबोर्ड लेआउट बदलते. या संगणकावरील Keyboard Changer अ‍ॅपला फक्त सक्रिय टॅबचे डोमेन पाठवते."
+    "message": "वेबसाइटनुसार कीबोर्ड लेआउट बदलते. या संगणकावरील Keyboard Switcher अ‍ॅपला फक्त सक्रिय टॅबचे डोमेन पाठवते."
   },
   "optionsIntro": {
-    "message": "Keyboard Changer अ‍ॅपचा पोर्ट (अ‍ॅपप्रमाणेच, डीफॉल्ट 47863)."
+    "message": "Keyboard Switcher अ‍ॅपचा पोर्ट (अ‍ॅपप्रमाणेच, डीफॉल्ट 47863)."
   },
   "optionsPort": {
     "message": "पोर्ट:"
@@ -21,12 +21,12 @@
     "message": "जतन केले."
   },
   "optionsConnected": {
-    "message": "Keyboard Changer शी कनेक्ट झाले."
+    "message": "Keyboard Switcher शी कनेक्ट झाले."
   },
   "optionsNotApp": {
     "message": "या पोर्टवर दुसरेच काहीतरी उत्तर देत आहे."
   },
   "optionsNotRunning": {
-    "message": "Keyboard Changer चालू नाही किंवा दुसरा पोर्ट वापरत आहे."
+    "message": "Keyboard Switcher चालू नाही किंवा दुसरा पोर्ट वापरत आहे."
   }
 }

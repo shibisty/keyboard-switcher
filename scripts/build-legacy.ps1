@@ -29,7 +29,7 @@ foreach ($p in "$QtDir\bin\windeployqt.exe", "$MinGWDir\bin\g++.exe", "$MinGWDir
 }
 
 $BuildDir = Join-Path $Root "build\legacy-$Arch"
-$Name = "KeyboardChanger-$Version-win7-$Arch"
+$Name = "KeyboardSwitcher-$Version-win7-$Arch"
 $Stage = Join-Path $Root "dist\legacy\$Name"
 $Zip = Join-Path $Root "dist\legacy\$Name.zip"
 
@@ -51,9 +51,9 @@ if ($LASTEXITCODE) { throw 'build failed' }
 Write-Host '==> deploy'
 if (Test-Path $Stage) { Remove-Item -Recurse -Force $Stage }
 New-Item -ItemType Directory -Force $Stage | Out-Null
-Copy-Item (Join-Path $BuildDir 'KeyboardChanger.exe') $Stage
+Copy-Item (Join-Path $BuildDir 'KeyboardSwitcher.exe') $Stage
 & "$QtDir\bin\windeployqt.exe" --release --no-translations --no-system-d3d-compiler `
-    --no-opengl-sw --no-angle --compiler-runtime (Join-Path $Stage 'KeyboardChanger.exe')
+    --no-opengl-sw --no-angle --compiler-runtime (Join-Path $Stage 'KeyboardSwitcher.exe')
 if ($LASTEXITCODE) { throw 'windeployqt failed' }
 
 Write-Host '==> zip'
