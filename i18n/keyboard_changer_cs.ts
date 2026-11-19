@@ -196,4 +196,27 @@
         <translation>Nástroje pro databáze a API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Převod textu</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Převést vybraný text:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Převádět i po ruční změně rozložení</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>V této relaci není dostupné.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Tato zkratka je již používána.</translation>
+    </message>
+</context>
 </TS>

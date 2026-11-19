@@ -196,4 +196,27 @@
         <translation>Meeshaalee kuusaa deetaa fi API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Jijjiirraa barruu</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Barruu filatame jijjiiri:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Sagantaa jijjiiruun booda illee jijjiiri</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Marsaa kana keessatti hin argamu.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Gabaabduun kun duraanuu fayyadamamaa jira.</translation>
+    </message>
+</context>
 </TS>

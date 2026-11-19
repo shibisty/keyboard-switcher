@@ -196,4 +196,27 @@
         <translation>Mga tool para sa database at API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Pag-convert ng teksto</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>I-convert ang napiling teksto:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>I-convert din pagkatapos kong manu-manong magpalit ng layout</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Hindi available sa session na ito.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Ginagamit na ang shortcut na ito.</translation>
+    </message>
+</context>
 </TS>

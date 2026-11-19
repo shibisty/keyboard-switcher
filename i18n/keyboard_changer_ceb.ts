@@ -196,4 +196,27 @@
         <translation>Mga himan sa database ug API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Pag-convert sa teksto</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>I-convert ang napiling teksto:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>I-convert usab human nako usba ang layout</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Dili magamit niini nga sesyon.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Gigamit na kini nga shortcut.</translation>
+    </message>
+</context>
 </TS>

@@ -196,4 +196,27 @@
         <translation>Instrumente pentru baze de date și API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Conversie text</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Convertește textul selectat:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Convertește și după schimbarea manuală a aranjamentului</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Indisponibil în această sesiune.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Această comandă rapidă este deja folosită.</translation>
+    </message>
+</context>
 </TS>

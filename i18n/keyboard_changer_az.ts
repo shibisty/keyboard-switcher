@@ -196,4 +196,27 @@
         <translation>Verilənlər bazası və API alətləri</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Mətn çevrilməsi</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Seçilmiş mətni çevir:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Düzəni əl ilə dəyişdikdən sonra da çevir</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Bu sessiyada əlçatan deyil.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Bu qısayol artıq istifadə olunur.</translation>
+    </message>
+</context>
 </TS>

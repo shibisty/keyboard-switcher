@@ -196,4 +196,27 @@
         <translation>ڈیٹا بیس اور API ٹولز</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>متن کی تبدیلی</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>منتخب متن تبدیل کریں:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>لے آؤٹ ہاتھ سے بدلنے کے بعد بھی تبدیل کریں</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>اس سیشن میں دستیاب نہیں۔</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>یہ شارٹ کٹ پہلے ہی استعمال میں ہے۔</translation>
+    </message>
+</context>
 </TS>

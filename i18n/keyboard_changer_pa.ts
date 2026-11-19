@@ -196,4 +196,27 @@
         <translation>ਡਾਟਾਬੇਸ ਅਤੇ API ਟੂਲ</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>ਟੈਕਸਟ ਤਬਦੀਲੀ</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>ਚੁਣਿਆ ਟੈਕਸਟ ਬਦਲੋ:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>ਲੇਆਉਟ ਹੱਥੀਂ ਬਦਲਣ ਤੋਂ ਬਾਅਦ ਵੀ ਬਦਲੋ</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ਇਸ ਸੈਸ਼ਨ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ।</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ਇਹ ਸ਼ਾਰਟਕੱਟ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ।</translation>
+    </message>
+</context>
 </TS>

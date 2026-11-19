@@ -2,6 +2,7 @@
 
 #include "core/engine.h"
 #include "core/languages.h"
+#include "core/selectionconverter.h"
 #include "icons.h"
 #include "platform/backend.h"
 #include "settingswindow.h"
@@ -35,6 +36,7 @@ TrayApp::TrayApp(QObject *parent)
     : QObject(parent)
     , m_backend(PlatformBackend::create(this))
     , m_engine(new LayoutEngine(m_backend, this))
+    , m_converter(new SelectionConverter(m_backend, m_engine, this))
 {
     m_actSettings = m_menu.addAction(QString(), this, &TrayApp::showSettings);
     m_actPause = m_menu.addAction(QString());
@@ -80,6 +82,7 @@ void TrayApp::start(bool launchedAtStartup)
     const quint16 port = quint16(QSettings().value(QStringLiteral("browserPort"), BrowserBridge::DefaultPort).toUInt());
     m_bridge.listen(port);
     m_backend->start();
+    applyConversion();
     m_tray.show();
     // First manual launch: show the window so the user sees where the app lives.
     if (!launchedAtStartup && (m_engine->rules().isEmpty() || !m_backend->problem().isEmpty()))
@@ -129,6 +132,8 @@ void TrayApp::showSettings()
     if (!m_window) {
         m_window = new SettingsWindow(m_engine, &m_bridge);
         connect(m_window, &SettingsWindow::languageRequested, this, &TrayApp::setLanguage);
+        connect(m_window, &SettingsWindow::conversionChanged, this, &TrayApp::applyConversion);
+        m_window->setHotkeyConflict(m_hotkeyConflict);
         connect(m_window, &QObject::destroyed, this, [] { QTimer::singleShot(0, trimMemory); });
         m_window->show();
         placeWindow();
@@ -138,6 +143,19 @@ void TrayApp::showSettings()
     }
     m_window->raise();
     m_window->activateWindow();
+}
+
+void TrayApp::applyConversion()
+{
+    QSettings settings;
+    const QKeySequence sequence(settings.value(QStringLiteral("convertHotkey"), QStringLiteral("Pause")).toString(),
+                                QKeySequence::PortableText);
+    int key = 0, mods = 0;
+    SelectionConverter::splitHotkey(sequence, &key, &mods);
+    const bool ok = m_converter->configure(key, mods, settings.value(QStringLiteral("convertOnSwitch"), false).toBool());
+    m_hotkeyConflict = !ok && key != 0 && m_converter->supported();
+    if (m_window)
+        m_window->setHotkeyConflict(m_hotkeyConflict);
 }
 
 void TrayApp::placeWindow()

@@ -196,4 +196,27 @@
         <translation>Alat pangkalan data &amp; API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Penukaran teks</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Tukar teks yang dipilih:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Tukar juga selepas saya menukar susun atur secara manual</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Tidak tersedia dalam sesi ini.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Pintasan ini sudah digunakan.</translation>
+    </message>
+</context>
 </TS>

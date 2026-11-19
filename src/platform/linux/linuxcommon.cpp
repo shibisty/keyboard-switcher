@@ -1,5 +1,7 @@
 #include "linuxbackends.h"
 
+#include <xkbcommon/xkbcommon.h>
+
 #include <QCoreApplication>
 #include <QDir>
 #include <QFile>
@@ -136,6 +138,55 @@ AutostartResult setAutostart(bool enabled)
                 .arg(exe)
                 .toUtf8());
     return AutostartResult::Ok;
+}
+
+
+bool keyMapFor(const QString &layoutId, KeyMap *out)
+{
+    QString layout = layoutId, variant;
+    const int open = layoutId.indexOf(QLatin1Char('('));
+    if (open > 0 && layoutId.endsWith(QLatin1Char(')'))) {
+        layout = layoutId.left(open);
+        variant = layoutId.mid(open + 1, layoutId.size() - open - 2);
+    }
+    if (layout.isEmpty())
+        return false;
+    const QByteArray l = layout.toLatin1(), v = variant.toLatin1();
+
+    xkb_context *ctx = xkb_context_new(XKB_CONTEXT_NO_FLAGS);
+    if (!ctx)
+        return false;
+    xkb_rule_names names{};
+    names.rules = "evdev";
+    names.model = "pc105";
+    names.layout = l.constData();
+    names.variant = v.isEmpty() ? nullptr : v.constData();
+    xkb_keymap *km = xkb_keymap_new_from_names(ctx, &names, XKB_KEYMAP_COMPILE_NO_FLAGS);
+    if (!km) {
+        xkb_context_unref(ctx);
+        return false;
+    }
+    const xkb_keycode_t lo = xkb_keymap_min_keycode(km), hi = xkb_keymap_max_keycode(km);
+    for (xkb_keycode_t key = lo; key <= hi; ++key) {
+        const xkb_level_index_t levels = xkb_keymap_num_levels_for_key(km, key, 0);
+        KeyLevels k;
+        bool any = false;
+        for (xkb_level_index_t level = 0; level < levels && level < 4; ++level) {
+            const xkb_keysym_t *syms = nullptr;
+            if (xkb_keymap_key_get_syms_by_level(km, key, 0, level, &syms) != 1)
+                continue;
+            const uint32_t cp = xkb_keysym_to_utf32(syms[0]);
+            if (cp < 0x20 || cp == 0x7f)
+                continue;
+            k.chars[level] = QString::fromUcs4(reinterpret_cast<const char32_t *>(&cp), 1);
+            any = true;
+        }
+        if (any)
+            out->insert(quint32(key), k);
+    }
+    xkb_keymap_unref(km);
+    xkb_context_unref(ctx);
+    return !out->isEmpty();
 }
 
 } // namespace linuxutil

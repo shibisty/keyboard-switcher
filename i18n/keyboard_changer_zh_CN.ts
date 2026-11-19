@@ -196,4 +196,27 @@
         <translation>数据库和 API 工具</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>文本转换</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>转换所选文本：</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>手动切换布局后也进行转换</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>此会话中不可用。</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>此快捷键已被占用。</translation>
+    </message>
+</context>
 </TS>

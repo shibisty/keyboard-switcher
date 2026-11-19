@@ -196,4 +196,27 @@
         <translation>ಡೇಟಾಬೇಸ್ ಮತ್ತು API ಸಾಧನಗಳು</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>ಪಠ್ಯ ಪರಿವರ್ತನೆ</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>ಆಯ್ದ ಪಠ್ಯವನ್ನು ಪರಿವರ್ತಿಸಿ:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>ಲೇಔಟ್ ಅನ್ನು ಕೈಯಾರೆ ಬದಲಿಸಿದ ನಂತರವೂ ಪರಿವರ್ತಿಸಿ</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ಈ ಸೆಷನ್‌ನಲ್ಲಿ ಲಭ್ಯವಿಲ್ಲ.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ಈ ಶಾರ್ಟ್‌ಕಟ್ ಈಗಾಗಲೇ ಬಳಕೆಯಲ್ಲಿದೆ.</translation>
+    </message>
+</context>
 </TS>

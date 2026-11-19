@@ -26,6 +26,7 @@ public:
     ~LayoutEngine() override;
 
     PlatformBackend *backend() const { return m_backend; }
+    const FocusInfo &focus() const { return m_focus; }
 
     const QList<Rule> &rules() const { return m_rules; }
     void addRule(const Rule &rule);  // replaces a rule with the same kind+key

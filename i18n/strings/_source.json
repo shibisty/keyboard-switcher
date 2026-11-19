@@ -53,5 +53,10 @@
 "Connected to Keyboard Changer.",
 "Something else answers on this port.",
 "Keyboard Changer is not running or uses another port.",
-"Switches the keyboard layout per application and website"
+"Switches the keyboard layout per application and website",
+"Text conversion",
+"Convert selected text:",
+"Also convert after I switch the layout manually",
+"Not available in this session.",
+"This shortcut is already in use."
 ]

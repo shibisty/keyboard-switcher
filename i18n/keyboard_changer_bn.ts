@@ -196,4 +196,27 @@
         <translation>ডেটাবেস ও API টুল</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>টেক্সট রূপান্তর</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>নির্বাচিত টেক্সট রূপান্তর করুন:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>হাতে লেআউট বদলানোর পরেও রূপান্তর করুন</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>এই সেশনে উপলব্ধ নয়।</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>এই শর্টকাট আগে থেকেই ব্যবহৃত হচ্ছে।</translation>
+    </message>
+</context>
 </TS>

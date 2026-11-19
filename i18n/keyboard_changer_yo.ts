@@ -196,4 +196,27 @@
         <translation>Àwọn irinṣẹ́ àkójọ-dátà àti API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Yíyí ọ̀rọ̀ padà</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Yí ọ̀rọ̀ tí a yàn padà:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Yí padà lẹ́yìn tí mo bá yí ìfilọ́lẹ̀ pẹ̀lú ọwọ́</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Kò sí ní àkókò yìí.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>A ti ń lo ọ̀nà ìkọ̀kọ̀ yìí.</translation>
+    </message>
+</context>
 </TS>

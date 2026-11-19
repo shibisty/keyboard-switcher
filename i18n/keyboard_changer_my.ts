@@ -196,4 +196,27 @@
         <translation>ဒေတာဘေ့စ်နှင့် API ကိရိယာများ</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>စာသားပြောင်းလဲခြင်း</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>ရွေးထားသောစာသားကို ပြောင်းရန်:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>ကီးဘုတ်အပြင်အဆင်ကို ကိုယ်တိုင်ပြောင်းပြီးနောက်လည်း ပြောင်းရန်</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ဤ session တွင် မရနိုင်ပါ။</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ဤ shortcut ကို အသုံးပြုထားပြီးဖြစ်သည်။</translation>
+    </message>
+</context>
 </TS>

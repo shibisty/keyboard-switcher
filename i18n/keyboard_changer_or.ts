@@ -196,4 +196,27 @@
         <translation>ଡାଟାବେସ୍ ଓ API ଟୁଲ୍</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>ପାଠ୍ୟ ରୂପାନ୍ତର</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>ଚୟନିତ ପାଠ୍ୟ ରୂପାନ୍ତର କରନ୍ତୁ:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>ଲେଆଉଟ୍ ନିଜେ ବଦଳାଇବା ପରେ ମଧ୍ୟ ରୂପାନ୍ତର କରନ୍ତୁ</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ଏହି ସେସନରେ ଉପଲବ୍ଧ ନୁହେଁ।</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ଏହି ସର୍ଟକଟ୍ ପୂର୍ବରୁ ବ୍ୟବହୃତ ହେଉଛି।</translation>
+    </message>
+</context>
 </TS>

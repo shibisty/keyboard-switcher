@@ -10,6 +10,7 @@
 
 class LayoutEngine;
 class PlatformBackend;
+class SelectionConverter;
 class SettingsWindow;
 
 class TrayApp : public QObject
@@ -31,9 +32,12 @@ private:
     void retranslate();
     void updateIcon();
     void placeWindow();
+    void applyConversion();
 
     PlatformBackend *m_backend;   // owned (QObject child); outlives m_engine
     LayoutEngine *m_engine;       // owned (QObject child)
+    SelectionConverter *m_converter;  // owned (QObject child)
+    bool m_hotkeyConflict = false;
     BrowserBridge m_bridge;
     QTranslator m_translator;
     QString m_language;

@@ -58,6 +58,8 @@ set(KC_SOURCES
     src/core/engine.h          src/core/engine.cpp
     src/core/presets.h         src/core/presets.cpp
     src/core/languages.h       src/core/languages.cpp       src/core/languages_gen.h
+    src/core/textconvert.h     src/core/textconvert.cpp
+    src/core/selectionconverter.h src/core/selectionconverter.cpp
     src/core/browserbridge.h   src/core/browserbridge.cpp
     src/platform/backend.h     src/platform/backend.cpp
     src/ui/icons.h             src/ui/icons.cpp
@@ -77,6 +79,8 @@ elseif(APPLE)
     set_source_files_properties(res/app.icns PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
 else()
     find_package(X11 REQUIRED)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(XKBCOMMON REQUIRED IMPORTED_TARGET xkbcommon)
     list(APPEND KC_SOURCES
         src/platform/linux/linuxbackends.h
         src/platform/linux/linuxcommon.cpp
@@ -142,7 +146,7 @@ elseif(APPLE)
 
 else()
     set_target_properties(appkeyboard_changer PROPERTIES OUTPUT_NAME keyboard-changer)
-    target_link_libraries(appkeyboard_changer PRIVATE ${QtX}::DBus X11::X11)
+    target_link_libraries(appkeyboard_changer PRIVATE ${QtX}::DBus X11::X11 X11::Xtst PkgConfig::XKBCOMMON)
     include(GNUInstallDirs)
     install(TARGETS appkeyboard_changer RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
     install(FILES packaging/linux/io.github.KeyboardChanger.desktop

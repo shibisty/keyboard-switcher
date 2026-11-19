@@ -196,4 +196,27 @@
         <translation>የውሂብ ጎታ እና API መሣሪያዎች</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>የጽሑፍ ልወጣ</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>የተመረጠውን ጽሑፍ ቀይር፦</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>አቀማመጥን በእጅ ከቀየርኩ በኋላም ቀይር</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>በዚህ ክፍለ ጊዜ አይገኝም።</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ይህ አቋራጭ አስቀድሞ በጥቅም ላይ ነው።</translation>
+    </message>
+</context>
 </TS>

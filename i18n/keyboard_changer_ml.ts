@@ -196,4 +196,27 @@
         <translation>ഡാറ്റാബേസ്, API ഉപകരണങ്ങൾ</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>ടെക്സ്റ്റ് പരിവർത്തനം</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>തിരഞ്ഞെടുത്ത ടെക്സ്റ്റ് പരിവർത്തനം ചെയ്യുക:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>ലേഔട്ട് സ്വയം മാറ്റിയതിനു ശേഷവും പരിവർത്തനം ചെയ്യുക</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ഈ സെഷനിൽ ലഭ്യമല്ല.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ഈ കുറുക്കുവഴി ഇതിനകം ഉപയോഗത്തിലാണ്.</translation>
+    </message>
+</context>
 </TS>

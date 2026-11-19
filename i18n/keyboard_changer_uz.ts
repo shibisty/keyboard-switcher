@@ -196,4 +196,27 @@
         <translation>Ma’lumotlar bazasi va API vositalari</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Matnni o‘zgartirish</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Tanlangan matnni o‘zgartirish:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Tartibni qo‘lda almashtirgandan keyin ham o‘zgartirish</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Bu seansda mavjud emas.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Bu tezkor tugma allaqachon ishlatilmoqda.</translation>
+    </message>
+</context>
 </TS>

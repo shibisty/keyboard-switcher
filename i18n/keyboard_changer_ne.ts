@@ -196,4 +196,27 @@
         <translation>डाटाबेस र API उपकरण</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>पाठ रूपान्तरण</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>चयन गरिएको पाठ रूपान्तरण गर्नुहोस्:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>लेआउट हातले बदलेपछि पनि रूपान्तरण गर्नुहोस्</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>यो सत्रमा उपलब्ध छैन।</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>यो सर्टकट पहिले नै प्रयोगमा छ।</translation>
+    </message>
+</context>
 </TS>

@@ -196,4 +196,27 @@
         <translation>Ngwa nchekwa data na API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Mgbanwe ederede</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Gbanwee ederede a họọrọ:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Gbanwekwa mgbe m jiri aka gbanwee nhazi</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Adịghị na oge a.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>A na-eji ụzọ mkpirisi a ugbu a.</translation>
+    </message>
+</context>
 </TS>

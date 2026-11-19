@@ -196,4 +196,27 @@
         <translation>డేటాబేస్ &amp; API సాధనాలు</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>టెక్స్ట్ మార్పిడి</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>ఎంచుకున్న టెక్స్ట్‌ను మార్చండి:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>లేఅవుట్‌ను చేతితో మార్చిన తర్వాత కూడా మార్చండి</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ఈ సెషన్‌లో అందుబాటులో లేదు.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ఈ షార్ట్‌కట్ ఇప్పటికే వాడుకలో ఉంది.</translation>
+    </message>
+</context>
 </TS>

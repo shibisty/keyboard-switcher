@@ -196,4 +196,27 @@
         <translation>Alati za baze podataka i API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Pretvaranje teksta</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Pretvori označeni tekst:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Pretvori i nakon ručne promjene rasporeda</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Nije dostupno u ovoj sesiji.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Ova prečica je već u upotrebi.</translation>
+    </message>
+</context>
 </TS>

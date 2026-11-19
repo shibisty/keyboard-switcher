@@ -196,4 +196,27 @@
         <translation>Εργαλεία βάσεων δεδομένων και API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Μετατροπή κειμένου</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Μετατροπή επιλεγμένου κειμένου:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Μετατροπή και μετά από χειροκίνητη αλλαγή διάταξης</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Δεν είναι διαθέσιμο σε αυτή τη συνεδρία.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Αυτή η συντόμευση χρησιμοποιείται ήδη.</translation>
+    </message>
+</context>
 </TS>

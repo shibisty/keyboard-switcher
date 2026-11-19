@@ -10,6 +10,7 @@ class QComboBox;
 class QFrame;
 class QLabel;
 class QLineEdit;
+class QKeySequenceEdit;
 class QPushButton;
 class QScrollArea;
 class QStackedWidget;
@@ -22,8 +23,12 @@ class SettingsWindow : public QWidget
 public:
     SettingsWindow(LayoutEngine *engine, BrowserBridge *bridge, QWidget *parent = nullptr);
 
+    // The hotkey for text conversion could not be registered (taken by another program).
+    void setHotkeyConflict(bool conflict);
+
 signals:
     void languageRequested(const QString &code);
+    void conversionChanged();  // hotkey or "after manual switch" option edited
 
 protected:
     void changeEvent(QEvent *event) override;
@@ -90,6 +95,15 @@ private:
     QLabel *m_status = nullptr;
 
     // browser
+    QLabel *m_convertTitle = nullptr;
+    QLabel *m_convertLabel = nullptr;
+    QKeySequenceEdit *m_convertKey = nullptr;
+    QToolButton *m_convertClear = nullptr;
+    QCheckBox *m_convertOnSwitch = nullptr;
+    QLabel *m_convertNote = nullptr;
+    bool m_hotkeyConflict = false;
+    void updateConvertNote();
+    void saveConversion();
     QLabel *m_browserTitle = nullptr;
     QLabel *m_browserStatus = nullptr;
 };

@@ -196,4 +196,27 @@
         <translation>Veritabanı ve API araçları</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Metin dönüştürme</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Seçili metni dönüştür:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Düzeni elle değiştirdikten sonra da dönüştür</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Bu oturumda kullanılamıyor.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Bu kısayol zaten kullanımda.</translation>
+    </message>
+</context>
 </TS>

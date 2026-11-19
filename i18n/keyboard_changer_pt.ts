@@ -196,4 +196,27 @@
         <translation>Ferramentas de banco de dados e API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Conversão de texto</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Converter o texto selecionado:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Converter também após trocar o layout manualmente</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Indisponível nesta sessão.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Este atalho já está em uso.</translation>
+    </message>
+</context>
 </TS>

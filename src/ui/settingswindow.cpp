@@ -4,6 +4,7 @@
 #include "core/engine.h"
 #include "core/languages.h"
 #include "core/presets.h"
+#include "core/selectionconverter.h"
 #include "icons.h"
 #include "platform/backend.h"
 
@@ -14,6 +15,7 @@
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QKeySequenceEdit>
 #include <QLineEdit>
 #include <QLocale>
 #include <QPushButton>
@@ -234,6 +236,33 @@ SettingsWindow::SettingsWindow(LayoutEngine *engine, BrowserBridge *bridge, QWid
     m_status->hide();
     root->addWidget(m_status);
 
+    // --- Text conversion ------------------------------------------------
+    root->addWidget(makeSeparator(this));
+    m_convertTitle = makeSectionTitle(this);
+    root->addWidget(m_convertTitle);
+    auto *convertRow = new QHBoxLayout;
+    m_convertLabel = new QLabel(this);
+    m_convertKey = new QKeySequenceEdit(
+        QKeySequence(QSettings().value(QStringLiteral("convertHotkey"), QStringLiteral("Pause")).toString()), this);
+    m_convertClear = new QToolButton(this);
+    m_convertClear->setText(QStringLiteral("\u00d7"));
+    m_convertClear->setAutoRaise(true);
+    convertRow->addWidget(m_convertLabel);
+    convertRow->addWidget(m_convertKey, 1);
+    convertRow->addWidget(m_convertClear);
+    root->addLayout(convertRow);
+    m_convertOnSwitch = new QCheckBox(this);
+    m_convertOnSwitch->setChecked(QSettings().value(QStringLiteral("convertOnSwitch"), false).toBool());
+    root->addWidget(m_convertOnSwitch);
+    m_convertNote = new QLabel(this);
+    m_convertNote->setWordWrap(true);
+    root->addWidget(m_convertNote);
+    const bool canConvert = m_engine->backend()->canConvertText();
+    m_convertLabel->setVisible(canConvert);
+    m_convertKey->setVisible(canConvert);
+    m_convertClear->setVisible(canConvert);
+    m_convertOnSwitch->setVisible(canConvert);
+
     // --- Browser --------------------------------------------------------
     root->addWidget(makeSeparator(this));
     m_browserTitle = makeSectionTitle(this);
@@ -257,6 +286,20 @@ SettingsWindow::SettingsWindow(LayoutEngine *engine, BrowserBridge *bridge, QWid
     connect(m_presetOk, &QPushButton::clicked, this, &SettingsWindow::commitPresets);
     connect(m_presetCancel, &QPushButton::clicked, this, [this] { showPresetPanel(false); });
     connect(m_autostart, &QCheckBox::toggled, this, &SettingsWindow::onAutostartToggled);
+    connect(m_convertKey, &QKeySequenceEdit::editingFinished, this, [this] {
+        // One shortcut only: keep the first combination of what was recorded.
+        const QKeySequence seq = m_convertKey->keySequence();
+        if (seq.count() > 1) {
+            const QSignalBlocker block(m_convertKey);
+            m_convertKey->setKeySequence(QKeySequence(seq.toString().section(QStringLiteral(", "), 0, 0)));
+        }
+        saveConversion();
+    });
+    connect(m_convertClear, &QToolButton::clicked, this, [this] {
+        m_convertKey->clear();
+        saveConversion();
+    });
+    connect(m_convertOnSwitch, &QCheckBox::toggled, this, [this] { saveConversion(); });
     connect(m_langCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int) {
         emit languageRequested(m_langCombo->currentData().toString());
     });
@@ -326,6 +369,10 @@ void SettingsWindow::retranslate()
     m_autostart->setText(tr("Start automatically at login"));
     m_langLabel->setText(tr("Language"));
     m_langCombo->setItemText(0, tr("System language"));
+    m_convertTitle->setText(tr("Text conversion"));
+    m_convertLabel->setText(tr("Convert selected text:"));
+    m_convertOnSwitch->setText(tr("Also convert after I switch the layout manually"));
+    updateConvertNote();
     m_browserTitle->setText(tr("Browser"));
     m_status->hide();
 
@@ -634,6 +681,31 @@ void SettingsWindow::commitPresets()
     showPresetPanel(false);
     for (const Rule &r : toAdd)
         m_engine->addRule(r);
+}
+
+void SettingsWindow::updateConvertNote()
+{
+    if (!m_engine->backend()->canConvertText())
+        m_convertNote->setText(tr("Not available in this session."));
+    else if (m_hotkeyConflict)
+        m_convertNote->setText(tr("This shortcut is already in use."));
+    else
+        m_convertNote->clear();
+    m_convertNote->setVisible(!m_convertNote->text().isEmpty());
+}
+
+void SettingsWindow::setHotkeyConflict(bool conflict)
+{
+    m_hotkeyConflict = conflict;
+    updateConvertNote();
+}
+
+void SettingsWindow::saveConversion()
+{
+    QSettings s;
+    s.setValue(QStringLiteral("convertHotkey"), m_convertKey->keySequence().toString(QKeySequence::PortableText));
+    s.setValue(QStringLiteral("convertOnSwitch"), m_convertOnSwitch->isChecked());
+    emit conversionChanged();
 }
 
 void SettingsWindow::onAutostartToggled(bool on)

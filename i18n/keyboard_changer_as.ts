@@ -196,4 +196,27 @@
         <translation>ডাটাবেছ আৰু API সঁজুলি</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>পাঠ ৰূপান্তৰ</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>নিৰ্বাচিত পাঠ ৰূপান্তৰ কৰক:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>লেআউট নিজে সলনি কৰাৰ পিছতো ৰূপান্তৰ কৰক</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>এই ছেচনত উপলব্ধ নহয়।</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>এই চৰ্টকাট ইতিমধ্যে ব্যৱহাৰ হৈ আছে।</translation>
+    </message>
+</context>
 </TS>

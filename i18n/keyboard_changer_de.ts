@@ -196,4 +196,27 @@
         <translation>Datenbank- &amp; API-Tools</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Textumwandlung</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Markierten Text umwandeln:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Auch nach manuellem Umschalten der Belegung umwandeln</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>In dieser Sitzung nicht verfügbar.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Diese Tastenkombination ist bereits belegt.</translation>
+    </message>
+</context>
 </TS>

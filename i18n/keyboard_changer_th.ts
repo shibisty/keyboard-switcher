@@ -196,4 +196,27 @@
         <translation>เครื่องมือฐานข้อมูลและ API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>การแปลงข้อความ</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>แปลงข้อความที่เลือก:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>แปลงหลังจากฉันสลับเลย์เอาต์ด้วยตนเองด้วย</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>ใช้ไม่ได้ในเซสชันนี้</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>ปุ่มลัดนี้ถูกใช้งานอยู่แล้ว</translation>
+    </message>
+</context>
 </TS>

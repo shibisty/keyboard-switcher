@@ -196,4 +196,27 @@
         <translation>දත්ත සමුදා සහ API මෙවලම්</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>පෙළ පරිවර්තනය</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>තෝරාගත් පෙළ පරිවර්තනය කරන්න:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>පිරිසැලසුම අතින් මාරු කළ පසුවද පරිවර්තනය කරන්න</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>මෙම සැසියේ නොමැත.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>මෙම කෙටිමඟ දැනටමත් භාවිතයේ ඇත.</translation>
+    </message>
+</context>
 </TS>

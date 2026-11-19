@@ -196,4 +196,27 @@
         <translation>Kayan aikin bayanai da API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Sauya rubutu</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Sauya rubutun da aka zaɓa:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Sauya kuma bayan na canza tsarin madannai da hannu</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Babu shi a wannan zaman.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>An riga an yi amfani da wannan gajeriyar hanya.</translation>
+    </message>
+</context>
 </TS>

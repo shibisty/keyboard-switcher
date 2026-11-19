@@ -196,4 +196,27 @@
         <translation>தரவுத்தளம் &amp; API கருவிகள்</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>உரை மாற்றம்</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>தேர்ந்தெடுத்த உரையை மாற்று:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>தளவமைப்பை கைமுறையாக மாற்றிய பிறகும் மாற்று</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>இந்த அமர்வில் கிடைக்கவில்லை.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>இந்த குறுக்குவழி ஏற்கனவே பயன்பாட்டில் உள்ளது.</translation>
+    </message>
+</context>
 </TS>

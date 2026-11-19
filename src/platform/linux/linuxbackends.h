@@ -3,6 +3,7 @@
 #include "platform/backend.h"
 
 #include <QByteArray>
+#include <QElapsedTimer>
 #include <QJsonValue>
 #include <QLocalSocket>
 #include <QTimer>
@@ -20,6 +21,8 @@ LayoutInfo xkbLayout(const QString &layout, const QString &variant, const QStrin
 LayoutInfo namedLayout(const QString &longName);
 bool autostartEnabled();
 AutostartResult setAutostart(bool enabled);
+// Key map of an XKB layout id ("us", "us(dvorak)") through libxkbcommon; no display needed.
+bool keyMapFor(const QString &layoutId, KeyMap *out);
 } // namespace linuxutil
 
 class LinuxBackend : public PlatformBackend
@@ -29,6 +32,7 @@ public:
     using PlatformBackend::PlatformBackend;
     bool autostartEnabled() const override { return linuxutil::autostartEnabled(); }
     AutostartResult setAutostart(bool enabled) override { return linuxutil::setAutostart(enabled); }
+    bool keyMap(const QString &layoutId, KeyMap *out) const override { return linuxutil::keyMapFor(layoutId, out); }
 };
 
 // --- X11: any EWMH window manager (XFCE, Cinnamon, MATE, LXQt, Budgie, i3, Openbox, ...) -----
@@ -46,7 +50,15 @@ public:
     void setLayout(const QString &id, quint64 handle) override;
     QStringList runningApps() const override;
 
+    bool canConvertText() const override;
+    bool sendCopy() override { return sendCtrlKey(54); }   // physical C
+    bool sendPaste() override { return sendCtrlKey(55); }  // physical V
+    bool modifiersReleased() const override;
+    bool setConvertHotkey(int qtKey, int qtMods) override;
+    void setWatchManualSwitch(bool on) override;
+
 private:
+    bool sendCtrlKey(unsigned keycode);
     void processEvents();
     void reportActiveWindow();
     QStringList idsForWindow(unsigned long window, QString *title) const;
@@ -55,6 +67,12 @@ private:
     unsigned long m_root = 0;
     unsigned long m_atomActive = 0, m_atomPid = 0, m_atomName = 0, m_atomUtf8 = 0, m_atomClients = 0, m_atomRules = 0;
     QSocketNotifier *m_notifier = nullptr;
+
+    int m_xkbEventBase = -1;
+    bool m_watchSwitch = false;
+    int m_lastGroup = 0;
+    QElapsedTimer m_ownSwitch;  // our own setLayout() must not look like a manual switch
+    unsigned m_hotkeyCode = 0, m_hotkeyMods = 0;
 };
 
 // --- Session D-Bus endpoint used by the KWin script and the GNOME Shell extension ----------

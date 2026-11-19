@@ -196,4 +196,27 @@
         <translation>ڊيٽابيس ۽ API اوزار</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>متن جي تبديلي</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>چونڊيل متن تبديل ڪريو:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>لي آئوٽ هٿ سان مٽائڻ کان پوءِ به تبديل ڪريو</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>هن سيشن ۾ دستياب ناهي.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>هي شارٽ ڪٽ اڳ ۾ ئي استعمال ۾ آهي.</translation>
+    </message>
+</context>
 </TS>

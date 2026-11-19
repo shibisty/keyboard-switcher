@@ -196,4 +196,27 @@
         <translation>データベースおよび API ツール</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>テキスト変換</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>選択したテキストを変換:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>レイアウトを手動で切り替えた後にも変換する</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>このセッションでは利用できません。</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>このショートカットは既に使用されています。</translation>
+    </message>
+</context>
 </TS>

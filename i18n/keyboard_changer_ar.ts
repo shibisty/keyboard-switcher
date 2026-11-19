@@ -196,4 +196,27 @@
         <translation>أدوات قواعد البيانات وواجهات API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>تحويل النص</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>تحويل النص المحدد:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>التحويل أيضًا بعد تبديل التخطيط يدويًا</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>غير متاح في هذه الجلسة.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>هذا الاختصار مستخدم بالفعل.</translation>
+    </message>
+</context>
 </TS>

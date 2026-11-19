@@ -196,4 +196,27 @@
         <translation>데이터베이스 및 API 도구</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>텍스트 변환</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>선택한 텍스트 변환:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>자판 배열을 수동으로 전환한 후에도 변환</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>이 세션에서는 사용할 수 없습니다.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>이 단축키는 이미 사용 중입니다.</translation>
+    </message>
+</context>
 </TS>

@@ -196,4 +196,27 @@
         <translation>Database- en API-tools</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Tekstconversie</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Geselecteerde tekst omzetten:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Ook omzetten na handmatig wisselen van indeling</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Niet beschikbaar in deze sessie.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Deze sneltoets is al in gebruik.</translation>
+    </message>
+</context>
 </TS>

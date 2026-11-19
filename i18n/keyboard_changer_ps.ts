@@ -196,4 +196,27 @@
         <translation>د ډېټابېس او API وسایل</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>د متن بدلون</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>ټاکل شوی متن بدل کړئ:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>د ترتیب له لاسي بدلولو وروسته هم بدل کړئ</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>په دې ناسته کې شتون نلري.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>دا شارټکټ لا دمخه کارول کیږي.</translation>
+    </message>
+</context>
 </TS>

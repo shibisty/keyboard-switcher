@@ -4,9 +4,9 @@
 #   ./scripts/build-linux.sh 1.1.0.0
 #
 # Build dependencies (Ubuntu 24.04+, Debian 13):
-#   sudo apt install build-essential cmake ninja-build qt6-base-dev qt6-tools-dev libx11-dev
+#   sudo apt install build-essential cmake ninja-build qt6-base-dev qt6-tools-dev libx11-dev libxtst-dev libxkbcommon-dev
 # Ubuntu 22.04 / Debian 12 (Qt 6 too old there, Qt 5.15 is used automatically):
-#   sudo apt install build-essential cmake ninja-build qtbase5-dev qttools5-dev libx11-dev
+#   sudo apt install build-essential cmake ninja-build qtbase5-dev qttools5-dev libx11-dev libxtst-dev libxkbcommon-dev
 # Fedora:
 #   sudo dnf install gcc-c++ cmake ninja-build qt6-qtbase-devel qt6-qttools-devel libX11-devel rpm-build
 set -euo pipefail

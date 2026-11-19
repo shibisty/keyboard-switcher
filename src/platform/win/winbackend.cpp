@@ -1,5 +1,8 @@
 #include "winbackend.h"
 
+#include "core/textconvert.h"
+
+#include <QAbstractEventDispatcher>
 #include <QCoreApplication>
 #include <QDir>
 #include <QSet>
@@ -176,6 +179,9 @@ WinBackend::WinBackend(QObject *parent)
 
 WinBackend::~WinBackend()
 {
+    setConvertHotkey(0, 0);
+    if (m_filterInstalled)
+        QCoreApplication::instance()->removeNativeEventFilter(this);
     if (m_hook)
         UnhookWinEvent(m_hook);
     s_instance = nullptr;
@@ -247,6 +253,8 @@ void WinBackend::setLayout(const QString &id, quint64 handle)
     // Always post: GetKeyboardLayout() of a just-activated thread can be stale when Windows
     // uses one input method for all apps (the default since Windows 8).
     if (hkl && hwnd)
+        m_ownSwitch.restart();
+    if (hkl && hwnd)
         PostMessageW(hwnd, WM_INPUTLANGCHANGEREQUEST, 0, reinterpret_cast<LPARAM>(hkl));
 }
 
@@ -285,4 +293,186 @@ AutostartResult WinBackend::setAutostart(bool enabled)
         reg.remove(QLatin1String(kRunValue));
     reg.sync();
     return reg.status() == QSettings::NoError ? AutostartResult::Ok : AutostartResult::Failed;
+}
+
+
+// --- Converting selected text ---------------------------------------------------------------
+
+namespace {
+
+constexpr int kHotkeyId = 0x4B43;  // "KC"
+
+UINT vkForQtKey(int key)
+{
+    if (key >= Qt::Key_A && key <= Qt::Key_Z)
+        return UINT('A' + (key - Qt::Key_A));
+    if (key >= Qt::Key_0 && key <= Qt::Key_9)
+        return UINT('0' + (key - Qt::Key_0));
+    if (key >= Qt::Key_F1 && key <= Qt::Key_F24)
+        return UINT(VK_F1 + (key - Qt::Key_F1));
+    switch (key) {
+    case Qt::Key_Pause:      return VK_PAUSE;
+    case Qt::Key_ScrollLock: return VK_SCROLL;
+    case Qt::Key_Print:      return VK_SNAPSHOT;
+    case Qt::Key_Insert:     return VK_INSERT;
+    case Qt::Key_Delete:     return VK_DELETE;
+    case Qt::Key_Home:       return VK_HOME;
+    case Qt::Key_End:        return VK_END;
+    case Qt::Key_PageUp:     return VK_PRIOR;
+    case Qt::Key_PageDown:   return VK_NEXT;
+    case Qt::Key_Space:      return VK_SPACE;
+    case Qt::Key_Tab:        return VK_TAB;
+    case Qt::Key_Return:
+    case Qt::Key_Enter:      return VK_RETURN;
+    case Qt::Key_Escape:     return VK_ESCAPE;
+    case Qt::Key_Backspace:  return VK_BACK;
+    case Qt::Key_Left:       return VK_LEFT;
+    case Qt::Key_Right:      return VK_RIGHT;
+    case Qt::Key_Up:         return VK_UP;
+    case Qt::Key_Down:       return VK_DOWN;
+    default:                 return 0;
+    }
+}
+
+bool keyDown(int vk) { return (GetAsyncKeyState(vk) & 0x8000) != 0; }
+
+}  // namespace
+
+bool WinBackend::keyMap(const QString &layoutId, KeyMap *out) const
+{
+    const HKL hkl = resolveLayout(layoutId);
+    if (!hkl)
+        return false;
+    // Level index: bit0 = Shift, bit1 = AltGr (Ctrl+Alt, how Windows models it).
+    for (UINT scan = 0x02; scan <= 0x53; ++scan) {
+        const UINT vk = MapVirtualKeyExW(scan, MAPVK_VSC_TO_VK_EX, hkl);
+        if (!vk)
+            continue;
+        KeyLevels k;
+        bool any = false;
+        for (int level = 0; level < 4; ++level) {
+            BYTE state[256] = {};
+            if (level & 1)
+                state[VK_SHIFT] = state[VK_LSHIFT] = 0x80;
+            if (level & 2)
+                state[VK_CONTROL] = state[VK_LCONTROL] = state[VK_MENU] = state[VK_RMENU] = 0x80;
+            wchar_t buf[8] = {};
+            // Flag 4: do not change the keyboard state (dead keys stay untouched).
+            const int n = ToUnicodeEx(vk, scan, state, buf, int(std::size(buf)), 4, hkl);
+            if (n < 0) {  // dead key: it was queued by the call, flush it
+                BYTE none[256] = {};
+                wchar_t flush[8];
+                ToUnicodeEx(VK_SPACE, 0x39, none, flush, int(std::size(flush)), 4, hkl);
+                continue;
+            }
+            if (n >= 1 && buf[0] >= 0x20 && buf[0] != 0x7F) {
+                k.chars[level] = QString::fromWCharArray(buf, n);
+                any = true;
+            }
+        }
+        if (any)
+            out->insert(quint32(scan), k);
+    }
+    return !out->isEmpty();
+}
+
+bool WinBackend::sendCtrlKey(WORD scanCode)
+{
+    // Physical keys by scan code: Ctrl+C / Ctrl+V keep working in any layout.
+    constexpr WORD kCtrlScan = 0x1D;
+    INPUT in[4] = {};
+    const WORD scans[4] = {kCtrlScan, scanCode, scanCode, kCtrlScan};
+    for (int i = 0; i < 4; ++i) {
+        in[i].type = INPUT_KEYBOARD;
+        in[i].ki.wScan = scans[i];
+        in[i].ki.dwFlags = KEYEVENTF_SCANCODE | (i >= 2 ? KEYEVENTF_KEYUP : 0);
+    }
+    return SendInput(4, in, sizeof(INPUT)) == 4;
+}
+
+bool WinBackend::sendCopy() { return sendCtrlKey(0x2E); }
+bool WinBackend::sendPaste() { return sendCtrlKey(0x2F); }
+
+bool WinBackend::modifiersReleased() const
+{
+    return !keyDown(VK_SHIFT) && !keyDown(VK_CONTROL) && !keyDown(VK_MENU) && !keyDown(VK_LWIN) && !keyDown(VK_RWIN);
+}
+
+bool WinBackend::setConvertHotkey(int qtKey, int qtMods)
+{
+    if (m_hotkeyRegistered) {
+        UnregisterHotKey(nullptr, kHotkeyId);
+        m_hotkeyRegistered = false;
+    }
+    if (qtKey == 0)
+        return true;
+    const UINT vk = vkForQtKey(qtKey);
+    if (!vk)
+        return false;
+    UINT mods = MOD_NOREPEAT;
+    if (qtMods & Qt::ShiftModifier)   mods |= MOD_SHIFT;
+    if (qtMods & Qt::ControlModifier) mods |= MOD_CONTROL;
+    if (qtMods & Qt::AltModifier)     mods |= MOD_ALT;
+    if (qtMods & Qt::MetaModifier)    mods |= MOD_WIN;
+    // hWnd = null: WM_HOTKEY is posted to this thread's queue and seen by the native event filter.
+    if (!RegisterHotKey(nullptr, kHotkeyId, mods, vk))
+        return false;
+    m_hotkeyRegistered = true;
+    if (!m_filterInstalled) {
+        QCoreApplication::instance()->installNativeEventFilter(this);
+        m_filterInstalled = true;
+    }
+    return true;
+}
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+bool WinBackend::nativeEventFilter(const QByteArray &, void *message, qintptr *)
+#else
+bool WinBackend::nativeEventFilter(const QByteArray &, void *message, long *)
+#endif
+{
+    const MSG *msg = static_cast<const MSG *>(message);
+    if (msg->message == WM_HOTKEY && msg->wParam == WPARAM(kHotkeyId)) {
+        emit convertHotkeyPressed();
+        return true;
+    }
+    return false;
+}
+
+// Windows has no "layout changed" notification for other applications, so the foreground
+// window's layout is compared periodically. Changes right after our own switch, and when the
+// foreground window changes, are not user switches.
+void WinBackend::setWatchManualSwitch(bool on)
+{
+    if (!on) {
+        m_layoutTimer.stop();
+        return;
+    }
+    if (!m_layoutTimer.isActive()) {
+        m_layoutTimer.setInterval(120);
+        connect(&m_layoutTimer, &QTimer::timeout, this, &WinBackend::pollLayout, Qt::UniqueConnection);
+    }
+    m_watchedWindow = nullptr;
+    m_knownLayout = nullptr;
+    m_layoutTimer.start();
+}
+
+void WinBackend::pollLayout()
+{
+    HWND hwnd = GetForegroundWindow();
+    if (!hwnd)
+        return;
+    const HKL now = GetKeyboardLayout(GetWindowThreadProcessId(hwnd, nullptr));
+    if (hwnd != m_watchedWindow || !m_knownLayout) {
+        m_watchedWindow = hwnd;
+        m_knownLayout = now;
+        return;
+    }
+    if (now == m_knownLayout)
+        return;
+    const HKL previous = m_knownLayout;
+    m_knownLayout = now;
+    if (m_ownSwitch.isValid() && m_ownSwitch.elapsed() < 600)
+        return;
+    emit layoutSwitchedByUser(hklToId(previous), hklToId(now));
 }

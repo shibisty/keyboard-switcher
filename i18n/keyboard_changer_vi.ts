@@ -196,4 +196,27 @@
         <translation>Công cụ cơ sở dữ liệu và API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Chuyển đổi văn bản</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Chuyển đổi văn bản đã chọn:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Cũng chuyển đổi sau khi tôi tự đổi bố cục</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Không khả dụng trong phiên này.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Phím tắt này đã được sử dụng.</translation>
+    </message>
+</context>
 </TS>

@@ -196,4 +196,27 @@
         <translation>Кліенты БД і API</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
+    <message>
+        <source>Text conversion</source>
+        <translation>Канвертацыя тэксту</translation>
+    </message>
+    <message>
+        <source>Convert selected text:</source>
+        <translation>Канвертаваць вылучаны тэкст:</translation>
+    </message>
+    <message>
+        <source>Also convert after I switch the layout manually</source>
+        <translation>Таксама канвертаваць пасля ручной змены раскладкі</translation>
+    </message>
+    <message>
+        <source>Not available in this session.</source>
+        <translation>Недаступна ў гэтым сеансе.</translation>
+    </message>
+    <message>
+        <source>This shortcut is already in use.</source>
+        <translation>Гэтае спалучэнне клавіш ужо занята.</translation>
+    </message>
+</context>
 </TS>

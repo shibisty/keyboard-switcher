@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate every localized artifact from i18n/strings/*.json + i18n/languages.json.
 
-  strings/_source.json   the 55 English source strings (order is fixed)
+  strings/_source.json   the 60 English source strings (order is fixed)
   strings/<code>.json    translations, same order
   languages.json         code / autonym / rtl / chrome-extension locale
 Outputs: i18n/keyboard_changer_<code>.ts, src/core/languages_gen.h,
@@ -22,7 +22,7 @@ for l in langs:
 tr = {c: json.load(open(I18N / f"strings/{c}.json", encoding="utf8")) for c in have}
 
 CTX = [("Backend", range(0, 7)), ("SettingsWindow", range(7, 36)), ("TrayApp", range(36, 41)),
-       ("SettingsWindow", [41]), ("Presets", range(42, 45))]
+       ("SettingsWindow", [41]), ("Presets", range(42, 45)), ("SettingsWindow", range(55, 60))]
 def ts(code, t):
     esc = lambda s: html.escape(s, quote=False)
     out = ['<?xml version="1.0" encoding="utf-8"?>', '<!DOCTYPE TS>',
